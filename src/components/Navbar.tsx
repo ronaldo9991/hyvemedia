@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Mail } from "lucide-react";
 import logoMark from "@/assets/logo-mark.png";
 
@@ -17,9 +17,16 @@ const navLinksRight = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > window.innerHeight);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-4 flex items-center justify-between bg-transparent">
+    <nav className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-4 flex items-center justify-between transition-colors duration-300 ${scrolled ? "bg-background shadow-sm" : "bg-transparent"}`}>
       <div className="flex items-center gap-6">
         {navLinksLeft.map((l) => (
           <a key={l.label} href={l.href} className="hidden md:block text-sm font-display font-medium text-foreground hover:opacity-70 transition-opacity">
