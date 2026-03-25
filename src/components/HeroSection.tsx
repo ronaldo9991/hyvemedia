@@ -20,7 +20,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
-        className="font-display font-black text-[18vw] md:text-[15vw] leading-[0.8] tracking-tighter text-foreground text-center lowercase whitespace-nowrap mb-[-4vw]"
+        className="font-display font-black text-[16vw] md:text-[13vw] leading-[0.85] tracking-tighter text-foreground text-center lowercase whitespace-nowrap pb-6"
       >
         HYVE Media
       </motion.h1>
