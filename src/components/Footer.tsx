@@ -23,7 +23,7 @@ const Footer = () => (
 
     <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-background/10">
       <p className="text-xs text-background/30 font-display">
-        © 2024 Melrose PR. All rights reserved.
+        © 2024 HYVE Media. All rights reserved.
       </p>
     </div>
   </footer>
