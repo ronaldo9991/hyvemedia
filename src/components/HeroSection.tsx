@@ -18,7 +18,7 @@ const HeroSection = () => {
         transition={{ duration: 1, delay: 0.6 }}
         className="font-display font-bold text-[12vw] md:text-[11vw] leading-[0.85] tracking-tighter text-foreground text-center lowercase"
       >
-        melrose PR
+        HYVE Media
       </motion.h1>
     </section>
   );

@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
       <div className="flex items-center gap-4">
         <img src={logoMark} alt="Logo" width={40} height={40} className="invert" loading="lazy" />
-        <span className="font-display text-xl font-bold text-background">melrose PR</span>
+        <span className="font-display text-xl font-bold text-background">HYVE Media</span>
       </div>
 
       <div className="flex flex-wrap gap-6">
@@ -23,7 +23,7 @@ const Footer = () => (
 
     <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-background/10">
       <p className="text-xs text-background/30 font-display">
-        © 2024 Melrose PR. All rights reserved.
+        © 2024 HYVE Media. All rights reserved.
       </p>
     </div>
   </footer>
