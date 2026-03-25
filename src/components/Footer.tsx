@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
       <div className="flex items-center gap-4">
         <img src={logoMark} alt="Logo" width={40} height={40} className="invert" loading="lazy" />
-        <span className="font-display text-xl font-bold text-background">melrose PR</span>
+        <span className="font-display text-xl font-bold text-background">HYVE Media</span>
       </div>
 
       <div className="flex flex-wrap gap-6">
