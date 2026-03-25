@@ -38,7 +38,7 @@ const HeroSection = () => {
         {/* Giant text that shrinks into logo on scroll */}
         <motion.h1
           style={{ scale, y, opacity }}
-          className="font-display font-black text-[16vw] md:text-[13vw] leading-[0.85] tracking-tighter text-foreground text-center lowercase whitespace-nowrap pb-6 origin-top"
+          className="font-display font-black text-[16vw] md:text-[13vw] leading-[0.85] tracking-tighter text-foreground text-center whitespace-nowrap pb-6 origin-top"
         >
           HYVE Media
         </motion.h1>
