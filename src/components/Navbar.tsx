@@ -65,7 +65,7 @@ const Navbar = () => {
       {open && (
         <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md p-6 flex flex-col gap-4 md:hidden border-b border-border">
           {[...navLinksLeft, ...navLinksRight].map((l) => (
-            <a key={l.label} href={l.href} onClick={() => setOpen(false)} className="text-lg font-display font-medium text-foreground">
+            <a key={l.label} href={l.href} onClick={() => setOpen(false)} className="text-lg font-body font-medium text-foreground">
               {l.label}
             </a>
           ))}
