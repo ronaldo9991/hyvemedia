@@ -21,7 +21,11 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > window.innerHeight);
+    const onScroll = () => {
+      // Hero is 150vh, text fades by 60% of that = 90vh
+      const triggerPoint = window.innerHeight * 0.9;
+      setScrolled(window.scrollY > triggerPoint);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
