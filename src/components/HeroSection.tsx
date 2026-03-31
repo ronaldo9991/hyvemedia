@@ -16,8 +16,8 @@ const HeroSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.45, 0.6], [1, 1, 0]);
 
   // Tagline fades out faster
-  const taglineOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
-  const taglineY = useTransform(scrollYProgress, [0, 0.3], [0, -60]);
+  const taglineOpacity = useTransform(scrollYProgress, [0, 0.12], [1, 0]);
+  const taglineY = useTransform(scrollYProgress, [0, 0.15], [0, -200]);
 
   return (
     <section
