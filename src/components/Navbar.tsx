@@ -69,7 +69,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="mailto:hello@example.com" className="text-lg font-display font-medium text-foreground flex items-center gap-2">
+          <a href="mailto:hello@example.com" className="text-lg font-body font-medium text-foreground flex items-center gap-2">
             <Mail size={18} /> Contact
           </a>
         </div>
