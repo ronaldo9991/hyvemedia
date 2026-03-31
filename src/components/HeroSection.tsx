@@ -24,21 +24,19 @@ const HeroSection = () => {
       ref={sectionRef}
       className="gradient-hero h-[150vh] relative overflow-hidden px-6"
     >
-      <div className="sticky top-0 h-screen flex flex-col items-center overflow-hidden">
-        {/* Tagline centered vertically */}
-        <div className="flex-1 flex items-center">
-          <motion.p
-            style={{ opacity: taglineOpacity, y: taglineY }}
-            className="text-sm md:text-base font-display tracking-wide text-foreground"
-          >
-            An Onchain Communications Firm
-          </motion.p>
-        </div>
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-end overflow-hidden">
+        {/* Tagline positioned above the big text */}
+        <motion.p
+          style={{ opacity: taglineOpacity, y: taglineY }}
+          className="text-base md:text-lg font-body tracking-wide text-foreground mb-6"
+        >
+          Lorem ipsum dolor sit amet
+        </motion.p>
 
         {/* Giant text that shrinks into logo on scroll */}
         <motion.h1
           style={{ scale, y, opacity }}
-          className="font-display font-black text-[16vw] md:text-[13vw] leading-[0.85] tracking-tighter text-foreground text-center whitespace-nowrap pb-6 origin-top"
+          className="font-display font-black text-[20vw] md:text-[17vw] leading-[0.85] tracking-tighter text-foreground text-center whitespace-nowrap pb-4 origin-top"
         >
           HYVE Media
         </motion.h1>
