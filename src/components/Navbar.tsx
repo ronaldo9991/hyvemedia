@@ -34,7 +34,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between transition-all duration-300 ${scrolled ? "bg-background shadow-sm" : "bg-transparent"}`}>
       <div className="flex items-center gap-6">
         {navLinksLeft.map((l) => (
-          <a key={l.label} href={l.href} className="hidden md:block text-sm font-display font-medium text-foreground hover:opacity-70 transition-opacity">
+          <a key={l.label} href={l.href} className="hidden md:block text-sm font-body font-medium text-foreground hover:opacity-70 transition-opacity">
             {l.label}
           </a>
         ))}
@@ -50,11 +50,11 @@ const Navbar = () => {
 
       <div className="flex items-center gap-6">
         {navLinksRight.map((l) => (
-          <a key={l.label} href={l.href} className="hidden md:block text-sm font-display font-medium text-foreground hover:opacity-70 transition-opacity">
+          <a key={l.label} href={l.href} className="hidden md:block text-sm font-body font-medium text-foreground hover:opacity-70 transition-opacity">
             {l.label}
           </a>
         ))}
-        <a href="mailto:hello@example.com" className="hidden md:flex items-center gap-2 text-sm font-display font-medium text-foreground hover:opacity-70 transition-opacity underline underline-offset-4">
+        <a href="mailto:hello@example.com" className="hidden md:flex items-center gap-2 text-sm font-body font-medium text-foreground hover:opacity-70 transition-opacity underline underline-offset-4">
           <Mail size={16} /> Contact
         </a>
         <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -65,11 +65,11 @@ const Navbar = () => {
       {open && (
         <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md p-6 flex flex-col gap-4 md:hidden border-b border-border">
           {[...navLinksLeft, ...navLinksRight].map((l) => (
-            <a key={l.label} href={l.href} onClick={() => setOpen(false)} className="text-lg font-display font-medium text-foreground">
+            <a key={l.label} href={l.href} onClick={() => setOpen(false)} className="text-lg font-body font-medium text-foreground">
               {l.label}
             </a>
           ))}
-          <a href="mailto:hello@example.com" className="text-lg font-display font-medium text-foreground flex items-center gap-2">
+          <a href="mailto:hello@example.com" className="text-lg font-body font-medium text-foreground flex items-center gap-2">
             <Mail size={18} /> Contact
           </a>
         </div>
