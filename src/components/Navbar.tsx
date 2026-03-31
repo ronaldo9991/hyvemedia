@@ -50,7 +50,7 @@ const Navbar = () => {
 
       <div className="flex items-center gap-6">
         {navLinksRight.map((l) => (
-          <a key={l.label} href={l.href} className="hidden md:block text-sm font-display font-medium text-foreground hover:opacity-70 transition-opacity">
+          <a key={l.label} href={l.href} className="hidden md:block text-sm font-body font-medium text-foreground hover:opacity-70 transition-opacity">
             {l.label}
           </a>
         ))}
