@@ -54,7 +54,7 @@ const Navbar = () => {
             {l.label}
           </a>
         ))}
-        <a href="mailto:hello@example.com" className="hidden md:flex items-center gap-2 text-sm font-display font-medium text-foreground hover:opacity-70 transition-opacity underline underline-offset-4">
+        <a href="mailto:hello@example.com" className="hidden md:flex items-center gap-2 text-sm font-body font-medium text-foreground hover:opacity-70 transition-opacity underline underline-offset-4">
           <Mail size={16} /> Contact
         </a>
         <button className="md:hidden" onClick={() => setOpen(!open)}>
