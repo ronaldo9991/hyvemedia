@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-page: #f5f3eb;
+    --color-text: #262626;
+    --color-orange: #ff7b00;
+    --color-orange-mid: #fbb36f;
+    --color-teal-mist: #dee7e8;
+    --color-divider: #c9c9c9;
+    --color-near-black: #1d1d1d;
+
+    --background: 43 33% 94%;
+    --foreground: 0 0% 15%;
+
+    --card: 43 33% 90%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 43 33% 94%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 30 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 11% 89%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 43 20% 88%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 30 100% 50%;
+    --accent-foreground: 0 0% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 79%;
+    --input: 0 0% 79%;
+    --ring: 30 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+
+    --font-display: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: var(--color-page);
+    color: var(--color-text);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+  }
+
+  .text-body {
+    font-family: var(--font-body);
+  }
+}
+
+/* ── Typography Scale ── */
+
+.type-h1 {
+  font-family: var(--font-display);
+  font-size: 38px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+@media (min-width: 768px) { .type-h1 { font-size: 56px; } }
+@media (min-width: 1024px) { .type-h1 { font-size: 72px; } }
+
+.type-h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .type-h2 { font-size: 34px; } }
+@media (min-width: 1024px) { .type-h2 { font-size: 44px; } }
+
+.type-h3 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+@media (min-width: 1024px) { .type-h3 { font-size: 24px; } }
+
+.type-body-lg {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+@media (min-width: 1024px) { .type-body-lg { font-size: 20px; } }
+
+.type-body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+@media (min-width: 1024px) { .type-body { font-size: 17px; } }
+
+.type-nav {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+@media (min-width: 1024px) { .type-nav { font-size: 14px; } }
+
+.type-caption {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+/* ── Layout Utilities ── */
+
+.section-pad {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+@media (min-width: 768px) {
+  .section-pad { padding-top: 88px; padding-bottom: 88px; }
+}
+@media (min-width: 1024px) {
+  .section-pad { padding-top: 120px; padding-bottom: 120px; }
+}
+
+.container-x {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+@media (min-width: 768px) {
+  .container-x { padding-left: 24px; padding-right: 24px; }
+}
+@media (min-width: 1024px) {
+  .container-x { padding-left: 40px; padding-right: 40px; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
