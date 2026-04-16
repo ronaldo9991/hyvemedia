@@ -8,22 +8,22 @@ const HeroSection = () => {
     offset: ["start start", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 0.6], [1, 0.06]);
-  const y = useTransform(scrollYProgress, [0, 0.6], [0, -300]);
-  const opacity = useTransform(scrollYProgress, [0, 0.45, 0.6], [1, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.4], [1, 0.12]);
+  const y = useTransform(scrollYProgress, [0, 0.4], [0, -220]);
+  const opacity = useTransform(scrollYProgress, [0, 0.28, 0.4], [1, 1, 0]);
 
-  const taglineOpacity = useTransform(scrollYProgress, [0, 0.12], [1, 0]);
-  const taglineY = useTransform(scrollYProgress, [0, 0.15], [0, -200]);
+  const taglineOpacity = useTransform(scrollYProgress, [0, 0.08], [1, 0]);
+  const taglineY = useTransform(scrollYProgress, [0, 0.1], [0, -120]);
 
   return (
     <section
       ref={sectionRef}
-      className="h-[150vh] relative overflow-hidden"
+      className="h-[115vh] relative overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #ff7b00 0%, #fbb36f 40%, #f5f3eb 100%)",
       }}
     >
-      <div className="sticky top-0 h-screen flex flex-col items-center justify-end overflow-hidden">
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
         <motion.p
           style={{ opacity: taglineOpacity, y: taglineY }}
           className="mb-6 type-body-lg"

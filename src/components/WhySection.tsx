@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import billboard from "@/assets/billboard.jpg";
 
 const WhySection = () => (
   <section
@@ -47,7 +46,7 @@ const WhySection = () => (
         transition={{ delay: 0.3, duration: 0.8 }}
         className="overflow-hidden"
       >
-        <img src={billboard} alt="Billboard" loading="lazy" width={1600} height={900} className="w-full h-auto object-cover" />
+        <img src="/photo1.png" alt="Billboard" loading="lazy" width={1600} height={900} className="w-full h-auto object-cover" />
       </motion.div>
     </div>
   </section>
