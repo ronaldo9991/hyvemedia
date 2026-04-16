@@ -16,31 +16,41 @@ const Starburst = () => (
 );
 
 const Blob = () => (
-  <div className="relative w-[72px] h-[72px] md:w-[80px] md:h-[80px] flex-shrink-0">
-    <div
-      className="absolute inset-0 rounded-[44%_56%_58%_42%_/_42%_44%_56%_58%]"
-      style={{
-        background: GRADIENT,
-        filter: "drop-shadow(0 2px 6px rgba(215, 75, 34, 0.3))",
-      }}
-    />
-    <div
-      className="absolute inset-[20%] rounded-full"
-      style={{ background: "radial-gradient(circle, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.12) 62%, rgba(255,255,255,0) 100%)" }}
-    />
+  <div className="cathy-loader" aria-hidden="true">
+    <span className="cathy-loader__inner" />
+    <span className="cathy-loader__orbit">
+      <span className="cathy-loader__dot" />
+      <span className="cathy-loader__dot" />
+      <span className="cathy-loader__dot" />
+      <span className="cathy-loader__dot" />
+    </span>
   </div>
 );
 
 const Diamond = () => (
   <div className="relative w-[60px] h-[60px] md:w-[68px] md:h-[68px] flex-shrink-0 mt-1">
-    <div
+    <motion.div
       className="absolute inset-0 rounded-xl"
+      animate={{
+        y: [0, -2, 0, 2, 0],
+        rotate: [45, 47, 45, 43, 45],
+        scale: [1, 1.015, 1, 0.99, 1],
+      }}
+      transition={{
+        duration: 6.2,
+        ease: "easeInOut",
+        repeat: Infinity,
+      }}
       style={{
         background: GRADIENT,
-        transform: "rotate(45deg)",
         filter: "drop-shadow(0 2px 6px rgba(215, 75, 34, 0.3))",
       }}
-    />
+    >
+      <span
+        className="absolute inset-[26%] rounded-full"
+        style={{ background: "radial-gradient(circle, rgba(255,247,230,0.9) 0%, rgba(255,247,230,0) 74%)" }}
+      />
+    </motion.div>
   </div>
 );
 
@@ -66,7 +76,7 @@ const JoinSection = () => (
   <section
     id="join"
     className="section-pad"
-    style={{ backgroundColor: "#e8e8e8" }}
+    style={{ backgroundColor: "#ffffff" }}
   >
     <div className="max-w-[1320px] mx-auto container-x">
       <p

@@ -1,49 +1,73 @@
-import logoMark from "@/assets/logo-mark.png";
+import logoSvg from "@/assets/logo.svg";
+import GlowBlob from "@/components/GlowBlob";
 
 const Footer = () => (
-  <footer className="section-pad" style={{ backgroundColor: "#1d1d1d" }}>
-    <div className="max-w-[1320px] mx-auto container-x flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-      <div className="flex items-center gap-4">
-        <img src={logoMark} alt="Logo" width={40} height={40} className="invert" loading="lazy" />
-        <span
-          className="type-h3"
-          style={{ color: "#f5f3eb" }}
-        >
-          HYVE Media
-        </span>
+  <footer className="section-pad" style={{ backgroundColor: "#1d1d1d", paddingTop: "96px", paddingBottom: "72px" }}>
+    <div className="max-w-[1320px] mx-auto container-x grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14">
+      <div className="space-y-6">
+        <img
+          src={logoSvg}
+          alt="HYVE Media"
+          loading="lazy"
+          className="h-9 w-auto"
+          style={{ filter: "invert(1) brightness(1.08)" }}
+        />
+
+        <div className="flex items-center gap-3">
+          <GlowBlob size={24} intensity="low" animated />
+          <p className="type-body" style={{ color: "rgba(245,243,235,0.75)", margin: 0 }}>
+            Made in Dubai
+          </p>
+        </div>
       </div>
 
-      <div className="flex flex-wrap gap-6">
-        {["Why", "What", "How", "Promise", "Join"].map((l) => (
-          <a
-            key={l}
-            href={`#${l.toLowerCase()}`}
-            className="type-nav transition-opacity hover:opacity-100"
-            style={{ color: "rgba(245,243,235,0.5)" }}
-          >
-            {l}
+      <div className="space-y-4">
+        <p className="type-caption" style={{ color: "rgba(245,243,235,0.45)", margin: 0 }}>Address</p>
+        <p className="type-body" style={{ color: "rgba(245,243,235,0.7)", margin: 0, maxWidth: "280px" }}>
+          Office 2904, Marina Plaza,
+          <br />
+          Dubai Marina, Dubai, UAE
+        </p>
+      </div>
+
+      <div className="space-y-4">
+        <p className="type-caption" style={{ color: "rgba(245,243,235,0.45)", margin: 0 }}>Navigate</p>
+        <div className="flex flex-wrap gap-5">
+          {["Why", "What", "How", "Promise", "Join"].map((l) => (
+            <a
+              key={l}
+              href={`#${l.toLowerCase()}`}
+              className="type-nav transition-opacity hover:opacity-100"
+              style={{ color: "rgba(245,243,235,0.6)" }}
+            >
+              {l}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        <p className="type-caption" style={{ color: "rgba(245,243,235,0.45)", margin: 0 }}>Connect</p>
+        <div className="flex flex-col gap-3">
+          <a href="https://instagram.com/hyvemedia" target="_blank" rel="noreferrer" className="type-body transition-opacity hover:opacity-80" style={{ color: "#ff7b00" }}>
+            Instagram
           </a>
-        ))}
+          <a href="https://linkedin.com/company/hyvemedia" target="_blank" rel="noreferrer" className="type-body transition-opacity hover:opacity-80" style={{ color: "#ff7b00" }}>
+            LinkedIn
+          </a>
+          <a href="mailto:hello@hyvemedia.com" className="type-body transition-opacity hover:opacity-80" style={{ color: "#ff7b00" }}>
+            hello@hyvemedia.com
+          </a>
+        </div>
       </div>
-
-      <a
-        href="mailto:hello@hyvemedia.com"
-        className="type-nav underline underline-offset-4"
-        style={{ color: "#ff7b00" }}
-      >
-        hello@hyvemedia.com
-      </a>
     </div>
 
     <div
-      className="max-w-[1320px] mx-auto container-x mt-16 pt-8"
+      className="max-w-[1320px] mx-auto container-x mt-14 pt-8"
       style={{ borderTop: "1px solid rgba(245,243,235,0.1)" }}
     >
-      <p
-        className="type-caption"
-        style={{ color: "rgba(245,243,235,0.3)", fontWeight: 400 }}
-      >
-        © 2024 HYVE Media. All rights reserved.
+      <p className="type-caption" style={{ color: "rgba(245,243,235,0.35)", fontWeight: 400 }}>
+        © 2026 HYVE Media. All rights reserved.
       </p>
     </div>
   </footer>
