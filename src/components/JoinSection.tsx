@@ -4,20 +4,14 @@ const GRADIENT =
   "radial-gradient(circle at 42% 38%, #fff5dc 0%, #ffe4a6 18%, #f9b336 40%, #f08a2e 58%, #e86528 74%, #d74b22 100%)";
 
 const Starburst = () => (
-  <div className="relative w-[72px] h-[72px] md:w-[80px] md:h-[80px] flex-shrink-0">
-    <div
-      className="absolute inset-0"
-      style={{
-        background: GRADIENT,
-        clipPath:
-          "polygon(50% 2%, 62% 34%, 96% 35%, 69% 56%, 78% 89%, 50% 70%, 22% 89%, 31% 56%, 4% 35%, 38% 34%)",
-        filter: "drop-shadow(0 2px 8px rgba(215, 75, 34, 0.35))",
-      }}
-    />
-    <div
-      className="absolute inset-[28%] rounded-full"
-      style={{ background: "radial-gradient(circle, rgba(255, 248, 226, 0.92) 0%, rgba(255, 248, 226, 0) 70%)" }}
-    />
+  <div className="pyramid-loader" aria-hidden="true">
+    <div className="pyramid-loader-wrapper">
+      <span className="pyramid-side pyramid-side1" />
+      <span className="pyramid-side pyramid-side2" />
+      <span className="pyramid-side pyramid-side3" />
+      <span className="pyramid-side pyramid-side4" />
+      <span className="pyramid-shadow" />
+    </div>
   </div>
 );
 

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 const promises = [
   {
@@ -44,6 +45,7 @@ const PromiseSection = () => (
         <br />
         "We've got you!"
       </h2>
+      <LoadingSpinner />
 
       <div
         className="grid md:grid-cols-2"
