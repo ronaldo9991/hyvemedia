@@ -10,13 +10,13 @@ const Starburst = () => (
       style={{
         background: GRADIENT,
         clipPath:
-          "polygon(50% 0%,57% 13%,71% 6%,68% 20%,83% 17%,77% 31%,92% 33%,81% 43%,95% 50%,81% 57%,92% 67%,77% 69%,83% 83%,68% 80%,71% 94%,57% 87%,50% 100%,43% 87%,29% 94%,32% 80%,17% 83%,23% 69%,8% 67%,19% 57%,5% 50%,19% 43%,8% 33%,23% 31%,17% 17%,32% 20%,29% 6%,43% 13%)",
-        filter: "drop-shadow(0 2px 6px rgba(215, 75, 34, 0.3))",
+          "polygon(50% 2%, 62% 34%, 96% 35%, 69% 56%, 78% 89%, 50% 70%, 22% 89%, 31% 56%, 4% 35%, 38% 34%)",
+        filter: "drop-shadow(0 2px 8px rgba(215, 75, 34, 0.35))",
       }}
     />
     <div
-      className="absolute inset-[24%] rounded-full"
-      style={{ background: "radial-gradient(circle, rgba(255, 248, 226, 0.9) 0%, rgba(255, 248, 226, 0) 72%)" }}
+      className="absolute inset-[28%] rounded-full"
+      style={{ background: "radial-gradient(circle, rgba(255, 248, 226, 0.92) 0%, rgba(255, 248, 226, 0) 70%)" }}
     />
   </div>
 );

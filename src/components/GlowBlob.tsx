@@ -12,18 +12,18 @@ interface GlowBlobProps {
 
 const PATH_STATES = [
   "M160 20 C237 20 300 83 300 160 C300 237 237 300 160 300 C83 300 20 237 20 160 C20 83 83 20 160 20Z",
-  "M162 16 C242 22 304 86 302 164 C298 244 234 306 156 304 C78 302 16 240 18 158 C22 76 82 14 162 16Z",
-  "M156 22 C238 16 306 78 304 156 C302 234 242 302 164 298 C86 304 22 244 20 164 C16 84 74 24 156 22Z",
-  "M164 18 C244 24 308 82 304 162 C300 242 236 308 158 306 C76 304 12 240 16 160 C20 78 84 12 164 18Z",
+  "M161 18 C239 21 302 84 301 162 C299 239 236 302 159 301 C81 299 18 236 19 159 C21 81 83 17 161 18Z",
+  "M159 19 C238 18 303 82 302 159 C301 238 239 303 161 302 C82 301 17 239 18 161 C19 82 80 20 159 19Z",
+  "M160 17 C240 19 304 81 303 160 C302 240 238 304 160 303 C80 302 16 240 17 160 C18 80 80 15 160 17Z",
 ];
 
 const intensityMap: Record<
   GlowBlobIntensity,
   { floatPx: number; morphDuration: number; spinDuration: number; rotateDuration: number; glowOpacity: number; scaleDelta: number }
 > = {
-  low: { floatPx: 3, morphDuration: 18, spinDuration: 28, rotateDuration: 40, glowOpacity: 0.18, scaleDelta: 0.008 },
-  medium: { floatPx: 5, morphDuration: 14, spinDuration: 22, rotateDuration: 32, glowOpacity: 0.22, scaleDelta: 0.012 },
-  high: { floatPx: 7, morphDuration: 10, spinDuration: 16, rotateDuration: 24, glowOpacity: 0.28, scaleDelta: 0.02 },
+  low: { floatPx: 2, morphDuration: 20, spinDuration: 30, rotateDuration: 50, glowOpacity: 0.3, scaleDelta: 0.005 },
+  medium: { floatPx: 3, morphDuration: 16, spinDuration: 24, rotateDuration: 40, glowOpacity: 0.38, scaleDelta: 0.008 },
+  high: { floatPx: 5, morphDuration: 12, spinDuration: 18, rotateDuration: 28, glowOpacity: 0.5, scaleDelta: 0.015 },
 };
 
 export default function GlowBlob({
@@ -64,45 +64,51 @@ export default function GlowBlob({
         transition={animated ? { duration: cfg.rotateDuration, ease: "linear", repeat: Infinity } : undefined}
       >
         <defs>
-          {/* Large cream interior — elliptical, wider than tall */}
+          {/* Cream interior — elliptical, wider than tall */}
           <radialGradient
             id={`cream-${id}`}
-            cx="0.5" cy="0.44" r="0.5"
-            gradientTransform="translate(0.5 0.44) scale(1 0.82) translate(-0.5 -0.44)"
+            cx="0.5" cy="0.44" r="0.48"
+            gradientTransform="translate(0.5 0.44) scale(1 0.84) translate(-0.5 -0.44)"
           >
-            <stop offset="0%" stopColor="#F5DFC0" />
-            <stop offset="40%" stopColor="#F2D4A8" />
-            <stop offset="62%" stopColor="#EDBE78" />
-            <stop offset="76%" stopColor="#F0A040" />
-            <stop offset="88%" stopColor="#FF8A18" stopOpacity="0.5" />
+            <stop offset="0%" stopColor="#FFF3E0" />
+            <stop offset="25%" stopColor="#F5DFC0" />
+            <stop offset="48%" stopColor="#F0C87A" />
+            <stop offset="65%" stopColor="#F0A040" />
+            <stop offset="80%" stopColor="#FF8A18" stopOpacity="0.6" />
             <stop offset="100%" stopColor="#FF7B00" stopOpacity="0" />
           </radialGradient>
 
-          {/* Top warm glow — yellow-gold bleed above the orb */}
-          <radialGradient id={`topGlow-${id}`} cx="50%" cy="6%" r="28%">
-            <stop offset="0%" stopColor="#FFD060" stopOpacity="0.5" />
-            <stop offset="50%" stopColor="#FFB830" stopOpacity="0.15" />
+          {/* Top warm glow */}
+          <radialGradient id={`topGlow-${id}`} cx="50%" cy="8%" r="30%">
+            <stop offset="0%" stopColor="#FFD060" stopOpacity="0.55" />
+            <stop offset="50%" stopColor="#FFB830" stopOpacity="0.18" />
             <stop offset="100%" stopColor="#FF7B00" stopOpacity="0" />
           </radialGradient>
 
           {/* Bottom warmth — deeper orange at base */}
-          <radialGradient id={`bottomWarm-${id}`} cx="50%" cy="82%" r="32%">
-            <stop offset="0%" stopColor="#E86000" stopOpacity="0.3" />
+          <radialGradient id={`bottomWarm-${id}`} cx="50%" cy="80%" r="34%">
+            <stop offset="0%" stopColor="#E85800" stopOpacity="0.4" />
+            <stop offset="60%" stopColor="#FF6A00" stopOpacity="0.12" />
             <stop offset="100%" stopColor="#FF7B00" stopOpacity="0" />
           </radialGradient>
 
-          {/* Outer glow halo — soft warm bloom */}
-          <filter id={`halo-${id}`} x="-25%" y="-25%" width="150%" height="150%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="8" />
+          {/* Outer glow halo — wide soft bloom */}
+          <filter id={`halo-${id}`} x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="14" />
           </filter>
 
-          {/* Very subtle inner softness */}
-          <filter id={`soft-${id}`} x="-3%" y="-3%" width="106%" height="106%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="0.8" />
+          {/* Medium halo for a second glow ring */}
+          <filter id={`haloMid-${id}`} x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+          </filter>
+
+          {/* Subtle inner softness */}
+          <filter id={`soft-${id}`} x="-2%" y="-2%" width="104%" height="104%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0.6" />
           </filter>
         </defs>
 
-        {/* Layer 1: Outer warm halo */}
+        {/* Layer 1: Wide outer glow bloom */}
         <motion.path
           d={PATH_STATES[0]}
           fill="#FF7B00"
@@ -112,7 +118,17 @@ export default function GlowBlob({
           transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
         />
 
-        {/* Layer 2: Solid orange base — the rim color */}
+        {/* Layer 2: Tighter mid-glow for intensity */}
+        <motion.path
+          d={PATH_STATES[0]}
+          fill="#FF8C00"
+          opacity={cfg.glowOpacity * 0.6}
+          filter={`url(#haloMid-${id})`}
+          animate={animated ? { d: [...PATH_STATES, PATH_STATES[0]] } : undefined}
+          transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
+        />
+
+        {/* Layer 3: Solid orange base */}
         <motion.path
           d={PATH_STATES[0]}
           fill="#FF7B00"
@@ -121,7 +137,7 @@ export default function GlowBlob({
           transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
         />
 
-        {/* Layer 3: Large cream interior — creates the egg-yolk center */}
+        {/* Layer 4: Cream interior — egg-yolk center */}
         <motion.path
           d={PATH_STATES[0]}
           fill={`url(#cream-${id})`}
@@ -129,7 +145,7 @@ export default function GlowBlob({
           transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
         />
 
-        {/* Layer 4: Top warm glow */}
+        {/* Layer 5: Top warm glow */}
         <motion.path
           d={PATH_STATES[0]}
           fill={`url(#topGlow-${id})`}
@@ -137,7 +153,7 @@ export default function GlowBlob({
           transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
         />
 
-        {/* Layer 5: Bottom warmth */}
+        {/* Layer 6: Bottom warmth */}
         <motion.path
           d={PATH_STATES[0]}
           fill={`url(#bottomWarm-${id})`}

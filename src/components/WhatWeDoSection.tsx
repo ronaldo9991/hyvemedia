@@ -62,7 +62,7 @@ const WhatWeDoSection = () => {
             aria-hidden="true"
           >
             <motion.div style={{ y: orbY }}>
-              <GlowBlob size={460} intensity="medium" animated />
+              <GlowBlob size={540} intensity="medium" animated />
             </motion.div>
           </div>
 
