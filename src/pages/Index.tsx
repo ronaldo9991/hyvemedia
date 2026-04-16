@@ -7,6 +7,7 @@ import WhatWeDoSection from "@/components/WhatWeDoSection";
 import HowWeWorkSection from "@/components/HowWeWorkSection";
 import PromiseSection from "@/components/PromiseSection";
 import JoinSection from "@/components/JoinSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
@@ -21,6 +22,7 @@ const Index = () => (
     <HowWeWorkSection />
     <PromiseSection />
     <JoinSection />
+    <ContactSection />
     <Footer />
     <WhatsAppFloat />
   </div>
