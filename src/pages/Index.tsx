@@ -7,6 +7,7 @@ import PublishedPhotoSection from "@/components/PublishedPhotoSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import HowWeWorkSection from "@/components/HowWeWorkSection";
 import PromiseSection from "@/components/PromiseSection";
+import PromisePhotosSection from "@/components/PromisePhotosSection";
 import JoinSection from "@/components/JoinSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ const Index = () => (
     <WhatWeDoSection />
     <HowWeWorkSection />
     <PromiseSection />
+    <PromisePhotosSection />
     <JoinSection />
     <ContactSection />
     <Footer />
