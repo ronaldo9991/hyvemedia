@@ -24,8 +24,8 @@ const Index = () => (
     <WhatWeDoSection />
     <HowWeWorkSection />
     <PromiseSection />
-    <PromisePhotosSection />
     <JoinSection />
+    <PromisePhotosSection />
     <ContactSection />
     <Footer />
     <WhatsAppFloat />
