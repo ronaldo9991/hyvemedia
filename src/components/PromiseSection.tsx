@@ -48,7 +48,7 @@ const PromiseSection = () => (
       <LoadingSpinner />
 
       <div
-        className="grid md:grid-cols-2"
+        className="grid md:grid-cols-2 md:items-stretch"
         style={{ gap: "56px 80px" }}
       >
         {promises.map((p, i) => (
@@ -58,9 +58,11 @@ const PromiseSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
+            className="h-full flex flex-col"
             style={{
               borderTop: "1px solid #c9c9c9",
               paddingTop: "24px",
+              minHeight: "220px",
             }}
           >
             <p
@@ -76,7 +78,7 @@ const PromiseSection = () => (
               {p.title}
             </h3>
             <p
-              className="type-body"
+              className="type-body mt-auto"
               style={{ color: "#262626", maxWidth: "480px" }}
             >
               {p.desc}
