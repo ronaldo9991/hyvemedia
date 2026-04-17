@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import StorytellingSection from "@/components/StorytellingSection";
 import WhySection from "@/components/WhySection";
 import LogoMarquee from "@/components/LogoMarquee";
+import PublishedPhotoSection from "@/components/PublishedPhotoSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import HowWeWorkSection from "@/components/HowWeWorkSection";
 import PromiseSection from "@/components/PromiseSection";
@@ -18,6 +19,7 @@ const Index = () => (
     <StorytellingSection />
     <WhySection />
     <LogoMarquee />
+    <PublishedPhotoSection />
     <WhatWeDoSection />
     <HowWeWorkSection />
     <PromiseSection />
