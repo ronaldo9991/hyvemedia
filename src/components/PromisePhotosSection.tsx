@@ -11,7 +11,7 @@ const PromisePhotosSection = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.65 }}
-          className="overflow-hidden rounded-[8px] aspect-[4/5] bg-white flex items-center justify-center"
+          className="overflow-hidden aspect-[4/5]"
         >
           <img
             src={photo23}
@@ -20,7 +20,7 @@ const PromisePhotosSection = () => (
             decoding="async"
             width={1400}
             height={1600}
-            className="w-full h-full object-cover scale-[1.12] object-[52%_50%]"
+            className="w-full h-full object-cover object-center scale-[1.08]"
           />
         </motion.div>
 
@@ -29,7 +29,7 @@ const PromisePhotosSection = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.65, delay: 0.08 }}
-          className="overflow-hidden rounded-[8px] aspect-[4/5] bg-white flex items-center justify-center"
+          className="overflow-hidden aspect-[4/5]"
         >
           <img
             src={photo25}
@@ -38,7 +38,7 @@ const PromisePhotosSection = () => (
             decoding="async"
             width={1400}
             height={1600}
-            className="w-full h-full object-cover scale-[1.12] object-center"
+            className="w-full h-full object-cover object-center scale-[1.08]"
           />
         </motion.div>
       </div>
