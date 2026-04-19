@@ -640,3 +640,122 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ──────────────────────────────────────────────────────────────
+   What We Do — section styles (HYVE MEDIA)
+   Pairs with: what-we-do.css reference
+   ──────────────────────────────────────────────────────────── */
+
+.whatwedo {
+  --rows-max: 920px;
+
+  position: relative;
+  overflow: hidden;
+  padding: 96px 0 120px;
+  background: linear-gradient(180deg, #f5f3eb 0%, #dee7e8 100%);
+}
+
+.whatwedo .wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.whatwedo .eyebrow {
+  text-align: center;
+  color: #ff7b00;
+  margin: 0 0 28px;
+}
+
+.whatwedo .heading {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 72px;
+  color: #1a1a1a;
+}
+
+/* ── Rows stage (stage width = rows width, so orb centers on the table) ── */
+.whatwedo .rows-stage {
+  position: relative;
+  max-width: var(--rows-max);
+  margin: 0 auto;
+}
+
+/* ── Orb ── */
+.whatwedo .orb-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* --orb-shift is driven by JS scroll-direction parallax */
+  transform: translate(-50%, calc(-50% + var(--orb-shift, 0px)));
+  transition: transform 1.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  z-index: 0;
+  pointer-events: none;
+  width: 560px;
+  height: 560px;
+  will-change: transform;
+}
+
+@media (max-width: 900px) {
+  .whatwedo .orb-layer { width: 440px; height: 440px; }
+}
+
+@media (max-width: 600px) {
+  .whatwedo .orb-layer { width: 340px; height: 340px; }
+}
+
+.whatwedo .orb-layer svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@keyframes orb-breathe {
+  0%, 100% { transform: scale(1);    filter: saturate(1.0); }
+  50%      { transform: scale(1.03); filter: saturate(1.08); }
+}
+
+.whatwedo .orb-inner {
+  width: 100%;
+  height: 100%;
+  animation: orb-breathe 9s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* ── Rows ── */
+.whatwedo .rows {
+  position: relative;
+  z-index: 1;
+}
+
+.whatwedo .row {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 64px;
+  padding: 28px 0;
+  border-top: 1px solid #c9c9c9;
+  align-items: baseline;
+}
+
+.whatwedo .row:last-of-type {
+  border-bottom: 1px solid #c9c9c9;
+}
+
+@media (min-width: 1024px) {
+  .whatwedo .row { padding: 34px 0; }
+}
+
+@media (max-width: 760px) {
+  .whatwedo .row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.whatwedo .row h3 { color: #1a1a1a; margin: 0; }
+.whatwedo .row p  { color: #262626; max-width: 560px; margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .whatwedo .orb-inner { animation: none; }
+  .whatwedo .orb-layer { transition: none; }
+}
