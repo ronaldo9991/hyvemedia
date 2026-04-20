@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import photo22 from "../../22.png";
+import whyImage from "@/assets/why.png";
 
 const WhySection = () => (
   <section
@@ -51,7 +51,7 @@ const WhySection = () => (
           className="overflow-hidden rounded-[8px] lg:justify-self-end lg:w-full lg:max-w-[460px]"
         >
           <img
-            src={photo22}
+            src={whyImage}
             alt="Why we exist visual"
             loading="lazy"
             width={1200}

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import photo23 from "../../23.png";
-import photo25 from "../../25.png";
+import promise1 from "@/assets/promise-1.png";
+import promise2 from "@/assets/promise-2.png";
 
 const PromisePhotosSection = () => (
   <section style={{ backgroundColor: "#ffffff" }}>
@@ -14,7 +14,7 @@ const PromisePhotosSection = () => (
           className="overflow-hidden aspect-[4/5]"
         >
           <img
-            src={photo23}
+            src={promise1}
             alt="Promise visual one"
             loading="lazy"
             decoding="async"
@@ -32,7 +32,7 @@ const PromisePhotosSection = () => (
           className="overflow-hidden aspect-[4/5]"
         >
           <img
-            src={photo25}
+            src={promise2}
             alt="Promise visual two"
             loading="lazy"
             decoding="async"

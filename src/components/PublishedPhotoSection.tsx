@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import photo1 from "../../photo1.png";
+import publishedImage from "@/assets/published.png";
 
 const PublishedPhotoSection = () => (
   <section style={{ backgroundColor: "#f5f3eb" }}>
@@ -12,7 +12,7 @@ const PublishedPhotoSection = () => (
         className="overflow-hidden rounded-[8px]"
       >
         <img
-          src={photo1}
+          src={publishedImage}
           alt="Media publication feature visual"
           loading="lazy"
           decoding="async"
