@@ -9,10 +9,10 @@ import {
   type LucideProps,
 } from "lucide-react";
 
-const ACCENT = "#ffa500";
+const ACCENT = "var(--color-orange)";
 const ICON_GRADIENT =
-  "linear-gradient(135deg, #ff9a1f 0%, #ff7b00 55%, #ff5e00 100%)";
-const ICON_SHADOW = "0 8px 20px rgba(255, 123, 0, 0.32)";
+  "linear-gradient(135deg, var(--color-orange-light) 0%, var(--color-orange) 55%, var(--color-orange-dark) 100%)";
+const ICON_SHADOW = "0 8px 20px rgb(var(--color-orange-rgb) / 0.32)";
 
 type Step = {
   phase: string;
@@ -24,38 +24,38 @@ type Step = {
 
 const steps: Step[] = [
   {
-    phase: "01 · Discover",
-    title: "Discovery & Immersion",
-    blurb: "We learn your brand inside-out and find the story worth telling.",
-    meta: "Audit · Audience · Signals",
+    phase: "01 · Diagnose",
+    title: "Diagnose the real problem",
+    blurb: "We start where most agencies skip — the commercial problem, not the marketing brief.",
+    meta: "Commercial · Audience · Signals",
     Icon: Compass,
   },
   {
-    phase: "02 · Strategy",
-    title: "Strategy & Blueprint",
-    blurb: "A sharp comms plan with clear themes, channels and KPIs.",
-    meta: "Messaging · Channels · KPIs",
+    phase: "02 · Design",
+    title: "Design the strategy and the system",
+    blurb: "One sharp idea. A clear plan. The intelligent systems that will accelerate it.",
+    meta: "Strategy · Blueprint · KPIs",
     Icon: Target,
   },
   {
-    phase: "03 · Create",
-    title: "Creative Development",
-    blurb: "High-conviction content that makes your message unmissable.",
-    meta: "Content · Thought Leadership",
+    phase: "03 · Build",
+    title: "Build the work and the agents",
+    blurb: "Senior strategists build the thinking. Intelligent agents execute at speed. Nothing ships without a senior sign-off.",
+    meta: "Creative · Content · Agents",
     Icon: Sparkles,
   },
   {
     phase: "04 · Launch",
-    title: "Activation & Launch",
-    blurb: "Owned and earned rollout, orchestrated for real momentum.",
-    meta: "Rollout · Media · Monitoring",
+    title: "Launch, then prove it",
+    blurb: "Go live fast. Measure against commercial outcomes — not vanity metrics.",
+    meta: "Launch · Measurement · Proof",
     Icon: Rocket,
   },
   {
-    phase: "05 · Scale",
-    title: "Optimize & Scale",
-    blurb: "We double down on what works, then compound it month over month.",
-    meta: "Insights · Iteration · Scale",
+    phase: "05 · Compound",
+    title: "Compound what works",
+    blurb: "We double down on what moves the business. We kill what doesn't. Every month.",
+    meta: "Optimise · Iterate · Scale",
     Icon: TrendingUp,
   },
 ];
@@ -102,7 +102,7 @@ const TimelineCard = ({ step, index, reduceMotion }: TimelineCardProps) => {
             ? {}
             : {
                 y: -4,
-                boxShadow: "0 18px 40px rgba(255, 165, 0, 0.18)",
+                boxShadow: "0 18px 40px rgb(var(--color-orange-rgb) / 0.18)",
               }
         }
         transition={{ type: "spring", stiffness: 220, damping: 22 }}
@@ -115,10 +115,7 @@ const TimelineCard = ({ step, index, reduceMotion }: TimelineCardProps) => {
       >
         <span
           className="pointer-events-none absolute right-4 top-2 select-none text-[64px] leading-none font-semibold"
-          style={{
-            color: "rgba(255,165,0,0.10)",
-            fontFamily: "'Cormorant Garamond', serif",
-          }}
+          style={{ color: "rgb(var(--color-orange-rgb) / 0.10)" }}
           aria-hidden="true"
         >
           {String(index + 1).padStart(2, "0")}
@@ -126,26 +123,26 @@ const TimelineCard = ({ step, index, reduceMotion }: TimelineCardProps) => {
 
         <p
           className="uppercase text-[11px] tracking-[0.18em] mb-3"
-          style={{ color: ACCENT, fontFamily: "Outfit, sans-serif" }}
+          style={{ color: ACCENT }}
         >
           {step.phase}
         </p>
 
         <h3
           className="text-[26px] md:text-[28px] leading-[1.08] mb-2 pr-14"
-          style={{ color: "#1d1d1d", fontFamily: "'Cormorant Garamond', serif" }}
+          style={{ color: "#1d1d1d" }}
         >
           {step.title}
         </h3>
         <p
           className="text-[15px] leading-[1.6] mb-3 max-w-[44ch]"
-          style={{ color: "#4a4a4a", fontFamily: "Outfit, sans-serif" }}
+          style={{ color: "#4a4a4a" }}
         >
           {step.blurb}
         </p>
         <p
           className="text-[11px] uppercase tracking-[0.16em]"
-          style={{ color: "rgba(29,29,29,0.48)", fontFamily: "Outfit, sans-serif" }}
+          style={{ color: "rgba(29,29,29,0.48)" }}
         >
           {step.meta}
         </p>
@@ -200,7 +197,7 @@ const HowWeWorkSection = () => {
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.5 }}
             className="uppercase text-[12px] tracking-[0.2em] mb-4"
-            style={{ color: ACCENT, fontFamily: "Outfit, sans-serif" }}
+            style={{ color: ACCENT }}
           >
             How We Work
           </motion.p>
@@ -210,7 +207,7 @@ const HowWeWorkSection = () => {
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.55, delay: 0.08 }}
             className="mx-auto max-w-[760px] text-[40px] md:text-[54px] leading-[1.04]"
-            style={{ color: "#1d1d1d", fontFamily: "'Cormorant Garamond', serif" }}
+            style={{ color: "#1d1d1d" }}
           >
             Five precise moves. <br className="hidden md:block" />
             <span style={{ color: ACCENT }}>Zero filler.</span>
@@ -221,7 +218,7 @@ const HowWeWorkSection = () => {
           {/* spine base + fill */}
           <div
             className="hidden md:block absolute left-1/2 top-2 bottom-2 w-[2px] -translate-x-1/2 rounded-full"
-            style={{ background: "rgba(255,165,0,0.18)" }}
+            style={{ background: "rgb(var(--color-orange-rgb) / 0.18)" }}
             aria-hidden="true"
           />
           <motion.div
@@ -248,7 +245,7 @@ const HowWeWorkSection = () => {
           viewport={{ once: true, margin: "-10% 0px" }}
           transition={{ duration: 0.5 }}
           className="mt-16 md:mt-20 text-center text-[13px] tracking-[0.2em] uppercase"
-          style={{ color: "rgba(29,29,29,0.58)", fontFamily: "Outfit, sans-serif" }}
+          style={{ color: "rgba(29,29,29,0.58)" }}
         >
           Precision. Not performance theatre.
         </motion.p>

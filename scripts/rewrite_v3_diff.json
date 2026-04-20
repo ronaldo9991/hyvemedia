@@ -1,0 +1,191 @@
+[
+  {
+    "id": "R001",
+    "section": "Meta / SEO",
+    "location": "Browser tab title",
+    "source": "index.html:7",
+    "v2_new": "HYVE — Agentic AI Growth Agency",
+    "v3_new": "HYVE — A Modern Media Agency",
+    "v3_notes": "V3: 'Modern Media' now the category (per CEO). Replaces 'Agentic AI Growth Agency' as the lead line."
+  },
+  {
+    "id": "R002",
+    "section": "Meta / SEO",
+    "location": "Meta description",
+    "source": "index.html:9",
+    "v2_new": "HYVE helps ambitious brands grow with agentic AI, led by senior strategists. Smarter work. Sharper outcomes. Built for CMOs driving change at scale.",
+    "v3_new": "HYVE is a Modern Media agency. Senior minds, machine speed. Built for how growth actually works now — across search, content, commerce and brand.",
+    "v3_notes": "V3: Modern Media framing. 'Agentic AI' removed from meta; behaviour ('machine speed') carries the essence."
+  },
+  {
+    "id": "R005",
+    "section": "Meta / SEO",
+    "location": "OG title",
+    "source": "index.html:20",
+    "v2_new": "HYVE — Agentic AI Growth Agency",
+    "v3_new": "HYVE — A Modern Media Agency",
+    "v3_notes": ""
+  },
+  {
+    "id": "R006",
+    "section": "Meta / SEO",
+    "location": "OG description",
+    "source": "index.html:23",
+    "v2_new": "Agentic AI, led by senior strategists. Growth for ambitious brands that want to move differently.",
+    "v3_new": "A Modern Media agency. Senior minds, machine speed. For ambitious brands that want to grow differently.",
+    "v3_notes": ""
+  },
+  {
+    "id": "R007",
+    "section": "Meta / SEO",
+    "location": "OG image alt",
+    "source": "index.html:27",
+    "v2_new": "HYVE — Agentic AI Growth Agency",
+    "v3_new": "HYVE — A Modern Media Agency",
+    "v3_notes": ""
+  },
+  {
+    "id": "R008",
+    "section": "Meta / SEO",
+    "location": "Twitter title",
+    "source": "index.html:30",
+    "v2_new": "HYVE — Agentic AI Growth Agency",
+    "v3_new": "HYVE — A Modern Media Agency",
+    "v3_notes": ""
+  },
+  {
+    "id": "R009",
+    "section": "Meta / SEO",
+    "location": "Twitter description",
+    "source": "index.html:33",
+    "v2_new": "Agentic AI, led by senior strategists. Growth for ambitious brands that want to move differently.",
+    "v3_new": "A Modern Media agency. Senior minds, machine speed. For brands that want to grow differently.",
+    "v3_notes": ""
+  },
+  {
+    "id": "R019",
+    "section": "Hero",
+    "location": "Tagline",
+    "source": "HeroSection.tsx:38",
+    "v2_new": "The Agentic AI Growth Agency.",
+    "v3_new": "A Modern Media Agency.",
+    "v3_notes": "V3: New category line. Confident category claim, no tool-led language."
+  },
+  {
+    "id": "R021",
+    "section": "Storytelling",
+    "location": "Section headline",
+    "source": "StorytellingSection.tsx:51",
+    "v2_new": "Everyone's an AI agency now. Almost none can prove it moves the business. That's the gap we close.",
+    "v3_new": "Search isn't search. Content isn't content. Commerce isn't commerce. They're one system now — and most agencies haven't caught up.",
+    "v3_notes": "V3: The Modern Media POV expressed as the opening argument. Names the shift, stakes the 'us vs them' without saying 'AI'."
+  },
+  {
+    "id": "R024",
+    "section": "Why We Exist",
+    "location": "Body paragraph",
+    "source": "WhySection.tsx:42",
+    "v2_new": "We built HYVE for ambitious brands that want to move faster — without losing the judgement that makes growth actually work. Senior talent leads every brief. Agentic AI accelerates the work. The result: sharper thinking, in less time, with outcomes that show up on the P&L.",
+    "v3_new": "Media has shifted. Search, content and commerce are becoming one system — most agencies aren't built for it. HYVE is. Senior minds lead every brief. We move at machine speed without losing the judgement. The result: sharper thinking, faster, with outcomes that show up on the P&L.",
+    "v3_notes": "V3: Ties Modern Media + the amplification POV together. 'Agentic AI' removed; 'machine speed' carries the weight."
+  },
+  {
+    "id": "R040",
+    "section": "What We Do",
+    "location": "Headline line 2",
+    "source": "WhatWeDoSection.tsx:72",
+    "v2_new": "Senior strategists. Agentic AI. Real outcomes.",
+    "v3_new": "Senior minds. Machine speed. Real outcomes.",
+    "v3_notes": "V3: Was 'Senior strategists. Agentic AI. Real outcomes.' 'Machine speed' is punchier and less tool-led."
+  },
+  {
+    "id": "R044",
+    "section": "What We Do",
+    "location": "Service 2 — description",
+    "source": "WhatWeDoSection.tsx:8",
+    "v2_new": "AI agents that take real work off your team — from research to content to campaign execution. Deployed with senior oversight on every output.",
+    "v3_new": "Intelligent agents that take real work off your team — from research to content to campaign execution. Deployed with senior oversight on every output.",
+    "v3_notes": "V3: 'Intelligent agents' instead of repeating 'agentic AI'."
+  },
+  {
+    "id": "R057",
+    "section": "How We Work",
+    "location": "Step 2 — title",
+    "source": "HowWeWorkSection.tsx:35",
+    "v2_new": "Design the strategy and AI blueprint",
+    "v3_new": "Design the strategy and the system",
+    "v3_notes": "V3: Was 'Design the strategy and AI blueprint'. Softer, less tool-led."
+  },
+  {
+    "id": "R058",
+    "section": "How We Work",
+    "location": "Step 2 — blurb",
+    "source": "HowWeWorkSection.tsx:36",
+    "v2_new": "One sharp idea. A clear plan. The agentic AI systems that will accelerate it.",
+    "v3_new": "One sharp idea. A clear plan. The intelligent systems that will accelerate it.",
+    "v3_notes": "V3: 'intelligent systems' replaces 'agentic AI systems'."
+  },
+  {
+    "id": "R059",
+    "section": "How We Work",
+    "location": "Step 2 — meta tags",
+    "source": "HowWeWorkSection.tsx:37",
+    "v2_new": "Strategy · AI Blueprint · KPIs",
+    "v3_new": "Strategy · Blueprint · KPIs",
+    "v3_notes": "V3: dropped 'AI' from 'AI Blueprint' — reads cleaner."
+  },
+  {
+    "id": "R062",
+    "section": "How We Work",
+    "location": "Step 3 — blurb",
+    "source": "HowWeWorkSection.tsx:43",
+    "v2_new": "Senior strategists build the thinking. Agentic AI executes at speed. Nothing ships without a senior sign-off.",
+    "v3_new": "Senior strategists build the thinking. Intelligent agents execute at speed. Nothing ships without a senior sign-off.",
+    "v3_notes": "V3: 'Intelligent agents' instead of 'agentic AI'."
+  },
+  {
+    "id": "R080",
+    "section": "Our Promise",
+    "location": "Promise 3 — title",
+    "source": "PromiseSection.tsx:17",
+    "v2_new": "Agentic AI, applied thoughtfully",
+    "v3_new": "Machine speed, human judgement",
+    "v3_notes": "V3: Was 'Agentic AI, applied thoughtfully'. 'Machine speed, human judgement' captures the essence without the phrase."
+  },
+  {
+    "id": "R081",
+    "section": "Our Promise",
+    "location": "Promise 3 — description",
+    "source": "PromiseSection.tsx:18",
+    "v2_new": "We use AI where it amplifies senior judgement. We don't use it where it replaces it. That's how you get smarter work, faster — without the shallow output everyone else is shipping.",
+    "v3_new": "We use AI where it amplifies senior thinking. We don't use it where it replaces it. That's how you get smarter work, faster — without the shallow output everyone else is shipping.",
+    "v3_notes": "V3: Short 'AI' (not 'agentic AI') — lighter touch, same meaning."
+  },
+  {
+    "id": "R093",
+    "section": "Join / Careers",
+    "location": "Value 3 — description (two paragraphs)",
+    "source": "JoinSection.tsx:71",
+    "v2_new": "Agentic AI is the lever. Senior judgement is the hand. We want people who use AI to 10x their thinking — not replace it. If that distinction matters to you, you'll fit here.",
+    "v3_new": "AI is the lever. Senior judgement is the hand. We want people who use it to 10x their thinking — not replace it. If that distinction matters to you, you'll fit here.",
+    "v3_notes": "V3: Dropped 'Agentic' from 'Agentic AI' — reads tighter, same idea."
+  },
+  {
+    "id": "R098",
+    "section": "Contact",
+    "location": "Body paragraph",
+    "source": "ContactSection.tsx:27",
+    "v2_new": "Tell us what you're trying to move. We'll come back with a sharp view on how agentic AI plus senior thinking can get you there.",
+    "v3_new": "Tell us what you're trying to move. We'll come back with a sharp view on how we'd approach it.",
+    "v3_notes": "V3: Removed 'agentic AI plus senior thinking' — less tool-led, more outcome-led."
+  },
+  {
+    "id": "R131",
+    "section": "WhatsApp Float",
+    "location": "Prefilled message",
+    "source": "WhatsAppFloat.tsx:4",
+    "v2_new": "Hi HYVE, I'd like to talk about how agentic AI could accelerate our growth.",
+    "v3_new": "Hi HYVE, I'd like to talk about accelerating our growth. When can we chat?",
+    "v3_notes": "V3: Removed 'agentic AI' from prefilled message — too on-the-nose for a WhatsApp opener."
+  }
+]

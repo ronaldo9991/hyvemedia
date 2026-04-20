@@ -1,0 +1,1226 @@
+[
+  {
+    "id": "R001",
+    "section": "Meta / SEO",
+    "location": "Browser tab title",
+    "source": "index.html:7",
+    "current": "HYVE Media | An Onchain Communications Firm",
+    "new": "HYVE — Agentic AI Growth Agency",
+    "notes": "Repositioning away from 'Onchain Communications Firm'. Category-defining tab title."
+  },
+  {
+    "id": "R002",
+    "section": "Meta / SEO",
+    "location": "Meta description",
+    "source": "index.html:9",
+    "current": "HYVE Media is an onchain communications firm helping Web3 teams win with strategy, thought leadership, press relations, and content.",
+    "new": "HYVE helps ambitious brands grow with agentic AI, led by senior strategists. Smarter work. Sharper outcomes. Built for CMOs driving change at scale.",
+    "notes": ""
+  },
+  {
+    "id": "R003",
+    "section": "Meta / SEO",
+    "location": "Meta author",
+    "source": "index.html:12",
+    "current": "HYVE Media",
+    "new": "HYVE",
+    "notes": ""
+  },
+  {
+    "id": "R004",
+    "section": "Meta / SEO",
+    "location": "OG site_name",
+    "source": "index.html:19",
+    "current": "HYVE Media",
+    "new": "HYVE",
+    "notes": ""
+  },
+  {
+    "id": "R005",
+    "section": "Meta / SEO",
+    "location": "OG title",
+    "source": "index.html:20",
+    "current": "HYVE Media | An Onchain Communications Firm",
+    "new": "HYVE — Agentic AI Growth Agency",
+    "notes": ""
+  },
+  {
+    "id": "R006",
+    "section": "Meta / SEO",
+    "location": "OG description",
+    "source": "index.html:23",
+    "current": "We help Web3 teams spotlight their message with strategy, thought leadership, press relations, and content.",
+    "new": "Agentic AI, led by senior strategists. Growth for ambitious brands that want to move differently.",
+    "notes": ""
+  },
+  {
+    "id": "R007",
+    "section": "Meta / SEO",
+    "location": "OG image alt",
+    "source": "index.html:27",
+    "current": "HYVE Media branding",
+    "new": "HYVE — Agentic AI Growth Agency",
+    "notes": ""
+  },
+  {
+    "id": "R008",
+    "section": "Meta / SEO",
+    "location": "Twitter title",
+    "source": "index.html:30",
+    "current": "HYVE Media | An Onchain Communications Firm",
+    "new": "HYVE — Agentic AI Growth Agency",
+    "notes": ""
+  },
+  {
+    "id": "R009",
+    "section": "Meta / SEO",
+    "location": "Twitter description",
+    "source": "index.html:33",
+    "current": "HYVE Media helps onchain teams earn visibility and trust through high-impact communications.",
+    "new": "Agentic AI, led by senior strategists. Growth for ambitious brands that want to move differently.",
+    "notes": ""
+  },
+  {
+    "id": "R010",
+    "section": "Navbar",
+    "location": "Left link 1",
+    "source": "Navbar.tsx:7",
+    "current": "Why",
+    "new": "Why",
+    "notes": "No change — clean IA."
+  },
+  {
+    "id": "R011",
+    "section": "Navbar",
+    "location": "Left link 2",
+    "source": "Navbar.tsx:8",
+    "current": "What",
+    "new": "What",
+    "notes": ""
+  },
+  {
+    "id": "R012",
+    "section": "Navbar",
+    "location": "Left link 3",
+    "source": "Navbar.tsx:9",
+    "current": "How",
+    "new": "How",
+    "notes": ""
+  },
+  {
+    "id": "R013",
+    "section": "Navbar",
+    "location": "Left link 4",
+    "source": "Navbar.tsx:10",
+    "current": "Promise",
+    "new": "Promise",
+    "notes": ""
+  },
+  {
+    "id": "R014",
+    "section": "Navbar",
+    "location": "Right link 1",
+    "source": "Navbar.tsx:14",
+    "current": "Join",
+    "new": "Join",
+    "notes": ""
+  },
+  {
+    "id": "R015",
+    "section": "Navbar",
+    "location": "Contact link",
+    "source": "Navbar.tsx:77",
+    "current": "Contact",
+    "new": "Contact",
+    "notes": ""
+  },
+  {
+    "id": "R016",
+    "section": "Navbar",
+    "location": "Contact email (mailto)",
+    "source": "Navbar.tsx:73",
+    "current": "hello@hyvemedia.com",
+    "new": "hello@hyvemedia.com",
+    "notes": "Confirm this is the correct inbound address."
+  },
+  {
+    "id": "R017",
+    "section": "Navbar",
+    "location": "Logo alt text (scrolled)",
+    "source": "Navbar.tsx:55",
+    "current": "HYVE Logo",
+    "new": "HYVE logo",
+    "notes": ""
+  },
+  {
+    "id": "R018",
+    "section": "Navbar",
+    "location": "Logo alt text (top)",
+    "source": "Navbar.tsx:57",
+    "current": "HYVE Icon",
+    "new": "HYVE icon",
+    "notes": ""
+  },
+  {
+    "id": "R019",
+    "section": "Hero",
+    "location": "Tagline",
+    "source": "HeroSection.tsx:38",
+    "current": "An Onchain Communications Firm",
+    "new": "The Agentic AI Growth Agency.",
+    "notes": "The category-defining line. Stakes the ground immediately. No 'leading', no 'firm' language."
+  },
+  {
+    "id": "R020",
+    "section": "Hero",
+    "location": "Main headline (wordmark)",
+    "source": "HeroSection.tsx:53",
+    "current": "HYVE Media",
+    "new": "HYVE",
+    "notes": "Recommend dropping 'Media' from the hero wordmark. Keep 'HYVE Media' only as the legal entity in footer/legal. The brand should display as HYVE."
+  },
+  {
+    "id": "R021",
+    "section": "Storytelling",
+    "location": "Section headline",
+    "source": "StorytellingSection.tsx:51",
+    "current": "Storytelling is a long game. We're here to help you win it.",
+    "new": "Everyone's an AI agency now. Almost none can prove it moves the business. That's the gap we close.",
+    "notes": "POV-led opening. Takes a position, creates a clear 'us vs them'. Replaces the crypto-PR framing entirely."
+  },
+  {
+    "id": "R022",
+    "section": "Why We Exist",
+    "location": "Eyebrow",
+    "source": "WhySection.tsx:20",
+    "current": "Why We Exist",
+    "new": "Why We Exist",
+    "notes": ""
+  },
+  {
+    "id": "R023",
+    "section": "Why We Exist",
+    "location": "Headline",
+    "source": "WhySection.tsx:31",
+    "current": "We believe in the long-term impact of decentralized technology and the power of communications.",
+    "new": "Senior strategists, amplified by agentic AI. Not replaced by it.",
+    "notes": "The single sharpest POV HYVE owns. This is the belief the whole brand should hang off."
+  },
+  {
+    "id": "R024",
+    "section": "Why We Exist",
+    "location": "Body paragraph",
+    "source": "WhySection.tsx:42",
+    "current": "Since 2016, we have focused exclusively on this innovative industry, helping teams on the cutting edge tell their stories. Whether it's infrastructure, the convergence of blockchain & AI, or venture capital — we do what we do because without great storytelling, no one would know this technology exists.",
+    "new": "We built HYVE for ambitious brands that want to move faster — without losing the judgement that makes growth actually work. Senior talent leads every brief. Agentic AI accelerates the work. The result: sharper thinking, in less time, with outcomes that show up on the P&L.",
+    "notes": ""
+  },
+  {
+    "id": "R025",
+    "section": "Why We Exist",
+    "location": "Image alt",
+    "source": "WhySection.tsx:55",
+    "current": "Why we exist visual",
+    "new": "Why HYVE exists visual",
+    "notes": ""
+  },
+  {
+    "id": "R026",
+    "section": "Logo Marquee",
+    "location": "Eyebrow",
+    "source": "LogoMarquee.tsx:20",
+    "current": "Regularly published in",
+    "new": "Featured in",
+    "notes": "DECISION NEEDED: Publications listed below are crypto/Web3-heavy, which conflicts with the new positioning. Recommend: (a) keep only mainstream publications (Bloomberg, CNBC, Forbes, Fortune, MarketWatch) and remove crypto-native ones, OR (b) remove this entire section until new press coverage lands that aligns with CMO/growth positioning. Do NOT leave all 10 as-is — it sends a mixed signal."
+  },
+  {
+    "id": "R027",
+    "section": "Logo Marquee",
+    "location": "Publication 1",
+    "source": "LogoMarquee.tsx:2",
+    "current": "Bloomberg",
+    "new": "Bloomberg",
+    "notes": "KEEP — mainstream business press. Supports CMO/growth positioning."
+  },
+  {
+    "id": "R028",
+    "section": "Logo Marquee",
+    "location": "Publication 2",
+    "source": "LogoMarquee.tsx:2",
+    "current": "CoinDesk",
+    "new": "CoinDesk",
+    "notes": "REMOVE — crypto-native, conflicts with new positioning."
+  },
+  {
+    "id": "R029",
+    "section": "Logo Marquee",
+    "location": "Publication 3",
+    "source": "LogoMarquee.tsx:2",
+    "current": "CNBC",
+    "new": "CNBC",
+    "notes": "KEEP — mainstream business press."
+  },
+  {
+    "id": "R030",
+    "section": "Logo Marquee",
+    "location": "Publication 4",
+    "source": "LogoMarquee.tsx:2",
+    "current": "Forbes",
+    "new": "Forbes",
+    "notes": "KEEP — mainstream business press."
+  },
+  {
+    "id": "R031",
+    "section": "Logo Marquee",
+    "location": "Publication 5",
+    "source": "LogoMarquee.tsx:2",
+    "current": "The Block",
+    "new": "The Block",
+    "notes": "REMOVE — crypto-native."
+  },
+  {
+    "id": "R032",
+    "section": "Logo Marquee",
+    "location": "Publication 6",
+    "source": "LogoMarquee.tsx:2",
+    "current": "Fortune",
+    "new": "Fortune",
+    "notes": "KEEP — mainstream business press."
+  },
+  {
+    "id": "R033",
+    "section": "Logo Marquee",
+    "location": "Publication 7",
+    "source": "LogoMarquee.tsx:3",
+    "current": "Bitcoin Magazine",
+    "new": "Bitcoin Magazine",
+    "notes": "REMOVE — crypto-native."
+  },
+  {
+    "id": "R034",
+    "section": "Logo Marquee",
+    "location": "Publication 8",
+    "source": "LogoMarquee.tsx:3",
+    "current": "Decrypt",
+    "new": "Decrypt",
+    "notes": "REMOVE — crypto-native."
+  },
+  {
+    "id": "R035",
+    "section": "Logo Marquee",
+    "location": "Publication 9",
+    "source": "LogoMarquee.tsx:3",
+    "current": "MarketWatch",
+    "new": "MarketWatch",
+    "notes": "KEEP — mainstream business press."
+  },
+  {
+    "id": "R036",
+    "section": "Logo Marquee",
+    "location": "Publication 10",
+    "source": "LogoMarquee.tsx:3",
+    "current": "BeInCrypto",
+    "new": "BeInCrypto",
+    "notes": "REMOVE — crypto-native."
+  },
+  {
+    "id": "R037",
+    "section": "Published Photo",
+    "location": "Image alt",
+    "source": "PublishedPhotoSection.tsx:16",
+    "current": "Media publication feature visual",
+    "new": "Coverage feature visual",
+    "notes": ""
+  },
+  {
+    "id": "R038",
+    "section": "What We Do",
+    "location": "Eyebrow",
+    "source": "WhatWeDoSection.tsx:67",
+    "current": "What We Do",
+    "new": "What We Do",
+    "notes": ""
+  },
+  {
+    "id": "R039",
+    "section": "What We Do",
+    "location": "Headline line 1",
+    "source": "WhatWeDoSection.tsx:70",
+    "current": "You bring the technology.",
+    "new": "Growth, re-engineered.",
+    "notes": "Replaces the old 'You bring the technology / We spotlight your message' PR framing."
+  },
+  {
+    "id": "R040",
+    "section": "What We Do",
+    "location": "Headline line 2",
+    "source": "WhatWeDoSection.tsx:72",
+    "current": "We spotlight your message on center stage.",
+    "new": "Senior strategists. Agentic AI. Real outcomes.",
+    "notes": ""
+  },
+  {
+    "id": "R041",
+    "section": "What We Do",
+    "location": "Service 1 — title",
+    "source": "WhatWeDoSection.tsx:5",
+    "current": "Strategy",
+    "new": "Growth Strategy",
+    "notes": "Replaces generic 'Strategy'. Tied to commercial outcomes, not marketing plans."
+  },
+  {
+    "id": "R042",
+    "section": "What We Do",
+    "location": "Service 1 — description",
+    "source": "WhatWeDoSection.tsx:5",
+    "current": "Refine your narrative to support your business goals.",
+    "new": "Clear commercial direction — built to move the business, not just the marketing metrics.",
+    "notes": ""
+  },
+  {
+    "id": "R043",
+    "section": "What We Do",
+    "location": "Service 2 — title",
+    "source": "WhatWeDoSection.tsx:7",
+    "current": "Thought Leadership",
+    "new": "Agentic AI Systems",
+    "notes": "Replaces 'Thought Leadership'. Named after the core capability HYVE wants to own."
+  },
+  {
+    "id": "R044",
+    "section": "What We Do",
+    "location": "Service 2 — description",
+    "source": "WhatWeDoSection.tsx:8",
+    "current": "Build the profiles of your team's leaders to broaden the impact of your story in the media.",
+    "new": "AI agents that take real work off your team — from research to content to campaign execution. Deployed with senior oversight on every output.",
+    "notes": ""
+  },
+  {
+    "id": "R045",
+    "section": "What We Do",
+    "location": "Service 3 — title",
+    "source": "WhatWeDoSection.tsx:11",
+    "current": "Press Relations",
+    "new": "Unified Commerce",
+    "notes": "Replaces 'Press Relations'. Aligned with HYVE focus areas."
+  },
+  {
+    "id": "R046",
+    "section": "What We Do",
+    "location": "Service 3 — description",
+    "source": "WhatWeDoSection.tsx:12",
+    "current": "Work our relationship magic to garner the coverage your project deserves.",
+    "new": "One connected system across brand, performance and CRM. Less friction. More revenue.",
+    "notes": ""
+  },
+  {
+    "id": "R047",
+    "section": "What We Do",
+    "location": "Service 4 — title",
+    "source": "WhatWeDoSection.tsx:15",
+    "current": "Content",
+    "new": "Future of Search",
+    "notes": "Replaces 'Content'. Aligned with HYVE focus areas — owning answers across Google, ChatGPT, Perplexity, Gemini."
+  },
+  {
+    "id": "R048",
+    "section": "What We Do",
+    "location": "Service 4 — description",
+    "source": "WhatWeDoSection.tsx:16",
+    "current": "Craft compelling content that meets your target audience where they're at.",
+    "new": "Own the answer — across Google, ChatGPT, Perplexity and Gemini. We position you where buyers now actually look.",
+    "notes": ""
+  },
+  {
+    "id": "R049",
+    "section": "How We Work",
+    "location": "Eyebrow",
+    "source": "HowWeWorkSection.tsx:205",
+    "current": "How We Work",
+    "new": "How We Work",
+    "notes": ""
+  },
+  {
+    "id": "R050",
+    "section": "How We Work",
+    "location": "Headline part 1",
+    "source": "HowWeWorkSection.tsx:215",
+    "current": "Five precise moves.",
+    "new": "Five precise moves.",
+    "notes": "Kept — it's sharp."
+  },
+  {
+    "id": "R051",
+    "section": "How We Work",
+    "location": "Headline part 2 (accent)",
+    "source": "HowWeWorkSection.tsx:216",
+    "current": "Zero filler.",
+    "new": "Zero filler.",
+    "notes": "Kept — it's sharp."
+  },
+  {
+    "id": "R052",
+    "section": "How We Work",
+    "location": "Step 1 — phase",
+    "source": "HowWeWorkSection.tsx:27",
+    "current": "01 · Discover",
+    "new": "01 · Diagnose",
+    "notes": "Renamed from 'Discover'. More commercial."
+  },
+  {
+    "id": "R053",
+    "section": "How We Work",
+    "location": "Step 1 — title",
+    "source": "HowWeWorkSection.tsx:28",
+    "current": "Discovery & Immersion",
+    "new": "Diagnose the real problem",
+    "notes": ""
+  },
+  {
+    "id": "R054",
+    "section": "How We Work",
+    "location": "Step 1 — blurb",
+    "source": "HowWeWorkSection.tsx:29",
+    "current": "We learn your brand inside-out and find the story worth telling.",
+    "new": "We start where most agencies skip — the commercial problem, not the marketing brief.",
+    "notes": ""
+  },
+  {
+    "id": "R055",
+    "section": "How We Work",
+    "location": "Step 1 — meta tags",
+    "source": "HowWeWorkSection.tsx:30",
+    "current": "Audit · Audience · Signals",
+    "new": "Commercial · Audience · Signals",
+    "notes": ""
+  },
+  {
+    "id": "R056",
+    "section": "How We Work",
+    "location": "Step 2 — phase",
+    "source": "HowWeWorkSection.tsx:34",
+    "current": "02 · Strategy",
+    "new": "02 · Design",
+    "notes": ""
+  },
+  {
+    "id": "R057",
+    "section": "How We Work",
+    "location": "Step 2 — title",
+    "source": "HowWeWorkSection.tsx:35",
+    "current": "Strategy & Blueprint",
+    "new": "Design the strategy and AI blueprint",
+    "notes": ""
+  },
+  {
+    "id": "R058",
+    "section": "How We Work",
+    "location": "Step 2 — blurb",
+    "source": "HowWeWorkSection.tsx:36",
+    "current": "A sharp comms plan with clear themes, channels and KPIs.",
+    "new": "One sharp idea. A clear plan. The agentic AI systems that will accelerate it.",
+    "notes": ""
+  },
+  {
+    "id": "R059",
+    "section": "How We Work",
+    "location": "Step 2 — meta tags",
+    "source": "HowWeWorkSection.tsx:37",
+    "current": "Messaging · Channels · KPIs",
+    "new": "Strategy · AI Blueprint · KPIs",
+    "notes": ""
+  },
+  {
+    "id": "R060",
+    "section": "How We Work",
+    "location": "Step 3 — phase",
+    "source": "HowWeWorkSection.tsx:41",
+    "current": "03 · Create",
+    "new": "03 · Build",
+    "notes": "Renamed from 'Create' — captures both creative and agent-build."
+  },
+  {
+    "id": "R061",
+    "section": "How We Work",
+    "location": "Step 3 — title",
+    "source": "HowWeWorkSection.tsx:42",
+    "current": "Creative Development",
+    "new": "Build the work and the agents",
+    "notes": ""
+  },
+  {
+    "id": "R062",
+    "section": "How We Work",
+    "location": "Step 3 — blurb",
+    "source": "HowWeWorkSection.tsx:43",
+    "current": "High-conviction content that makes your message unmissable.",
+    "new": "Senior strategists build the thinking. Agentic AI executes at speed. Nothing ships without a senior sign-off.",
+    "notes": ""
+  },
+  {
+    "id": "R063",
+    "section": "How We Work",
+    "location": "Step 3 — meta tags",
+    "source": "HowWeWorkSection.tsx:44",
+    "current": "Content · Thought Leadership",
+    "new": "Creative · Content · Agents",
+    "notes": ""
+  },
+  {
+    "id": "R064",
+    "section": "How We Work",
+    "location": "Step 4 — phase",
+    "source": "HowWeWorkSection.tsx:48",
+    "current": "04 · Launch",
+    "new": "04 · Launch",
+    "notes": ""
+  },
+  {
+    "id": "R065",
+    "section": "How We Work",
+    "location": "Step 4 — title",
+    "source": "HowWeWorkSection.tsx:49",
+    "current": "Activation & Launch",
+    "new": "Launch, then prove it",
+    "notes": ""
+  },
+  {
+    "id": "R066",
+    "section": "How We Work",
+    "location": "Step 4 — blurb",
+    "source": "HowWeWorkSection.tsx:50",
+    "current": "Owned and earned rollout, orchestrated for real momentum.",
+    "new": "Go live fast. Measure against commercial outcomes — not vanity metrics.",
+    "notes": ""
+  },
+  {
+    "id": "R067",
+    "section": "How We Work",
+    "location": "Step 4 — meta tags",
+    "source": "HowWeWorkSection.tsx:51",
+    "current": "Rollout · Media · Monitoring",
+    "new": "Launch · Measurement · Proof",
+    "notes": ""
+  },
+  {
+    "id": "R068",
+    "section": "How We Work",
+    "location": "Step 5 — phase",
+    "source": "HowWeWorkSection.tsx:55",
+    "current": "05 · Scale",
+    "new": "05 · Compound",
+    "notes": "Renamed from 'Scale' — sharper, implies ongoing multiplier."
+  },
+  {
+    "id": "R069",
+    "section": "How We Work",
+    "location": "Step 5 — title",
+    "source": "HowWeWorkSection.tsx:56",
+    "current": "Optimize & Scale",
+    "new": "Compound what works",
+    "notes": ""
+  },
+  {
+    "id": "R070",
+    "section": "How We Work",
+    "location": "Step 5 — blurb",
+    "source": "HowWeWorkSection.tsx:57",
+    "current": "We double down on what works, then compound it month over month.",
+    "new": "We double down on what moves the business. We kill what doesn't. Every month.",
+    "notes": ""
+  },
+  {
+    "id": "R071",
+    "section": "How We Work",
+    "location": "Step 5 — meta tags",
+    "source": "HowWeWorkSection.tsx:58",
+    "current": "Insights · Iteration · Scale",
+    "new": "Optimise · Iterate · Scale",
+    "notes": ""
+  },
+  {
+    "id": "R072",
+    "section": "How We Work",
+    "location": "Closing tag line",
+    "source": "HowWeWorkSection.tsx:253",
+    "current": "Precision. Not performance theatre.",
+    "new": "Precision. Not performance theatre.",
+    "notes": "Kept — excellent line, aligned with new positioning."
+  },
+  {
+    "id": "R073",
+    "section": "Our Promise",
+    "location": "Eyebrow",
+    "source": "PromiseSection.tsx:38",
+    "current": "Our Promise To You",
+    "new": "Our Promise",
+    "notes": ""
+  },
+  {
+    "id": "R074",
+    "section": "Our Promise",
+    "location": "Headline line 1",
+    "source": "PromiseSection.tsx:44",
+    "current": "You can lean on us as your communications experts.",
+    "new": "Hire us for outcomes.",
+    "notes": "Replaces the 'We've got you!' PR-firm tone with something direct and commercial."
+  },
+  {
+    "id": "R075",
+    "section": "Our Promise",
+    "location": "Headline line 2",
+    "source": "PromiseSection.tsx:46",
+    "current": "\"We've got you!\"",
+    "new": "We deliver them.",
+    "notes": ""
+  },
+  {
+    "id": "R076",
+    "section": "Our Promise",
+    "location": "Promise 1 — title",
+    "source": "PromiseSection.tsx:7",
+    "current": "Extremely communicative",
+    "new": "On time. Above expectation.",
+    "notes": "Replaces 'Extremely communicative' — anchored directly to your Strategic Intent line."
+  },
+  {
+    "id": "R077",
+    "section": "Our Promise",
+    "location": "Promise 1 — description",
+    "source": "PromiseSection.tsx:8",
+    "current": "You'll hear from us A LOT. We won't leave you waiting or wondering what's next. Communication is the name of the game for us.",
+    "new": "We deliver what we promised, when we promised it — usually sharper than you asked for. That's the whole point.",
+    "notes": ""
+  },
+  {
+    "id": "R078",
+    "section": "Our Promise",
+    "location": "Promise 2 — title",
+    "source": "PromiseSection.tsx:12",
+    "current": "High quality results",
+    "new": "Senior thinking, every brief",
+    "notes": "Replaces 'High quality results' with something that actually says what the quality IS."
+  },
+  {
+    "id": "R079",
+    "section": "Our Promise",
+    "location": "Promise 2 — description",
+    "source": "PromiseSection.tsx:13",
+    "current": "The proof is in the pudding — we deliver results that create the greatest impact.",
+    "new": "No junior drift. No AI-generated fluff. The senior minds on your account are the senior minds solving the problem.",
+    "notes": ""
+  },
+  {
+    "id": "R080",
+    "section": "Our Promise",
+    "location": "Promise 3 — title",
+    "source": "PromiseSection.tsx:17",
+    "current": "Crypto obsessed",
+    "new": "Agentic AI, applied thoughtfully",
+    "notes": "Replaces 'Crypto obsessed' — core of the repositioning."
+  },
+  {
+    "id": "R081",
+    "section": "Our Promise",
+    "location": "Promise 3 — description",
+    "source": "PromiseSection.tsx:18",
+    "current": "Communicating the value of cutting-edge companies and projects to the world gives us purpose; it's a mission that's personal to us.",
+    "new": "We use AI where it amplifies senior judgement. We don't use it where it replaces it. That's how you get smarter work, faster — without the shallow output everyone else is shipping.",
+    "notes": ""
+  },
+  {
+    "id": "R082",
+    "section": "Our Promise",
+    "location": "Promise 4 — title",
+    "source": "PromiseSection.tsx:22",
+    "current": "Win the long game",
+    "new": "In it for the long game",
+    "notes": ""
+  },
+  {
+    "id": "R083",
+    "section": "Our Promise",
+    "location": "Promise 4 — description",
+    "source": "PromiseSection.tsx:23",
+    "current": "Your goals are our goals. We're here to help you go the distance and realize your project's vision.",
+    "new": "We work best with brands that want to compound outcomes, not run a campaign and disappear. Your growth is our brief — for as long as you want us on it.",
+    "notes": ""
+  },
+  {
+    "id": "R084",
+    "section": "Join / Careers",
+    "location": "Eyebrow",
+    "source": "JoinSection.tsx:86",
+    "current": "Join Our Team",
+    "new": "Join Us",
+    "notes": ""
+  },
+  {
+    "id": "R085",
+    "section": "Join / Careers",
+    "location": "Headline",
+    "source": "JoinSection.tsx:92",
+    "current": "Manifesting your dream job at HYVE Media?",
+    "new": "Think you belong at HYVE?",
+    "notes": ""
+  },
+  {
+    "id": "R086",
+    "section": "Join / Careers",
+    "location": "Intro paragraph (full, with link text 'email')",
+    "source": "JoinSection.tsx:98",
+    "current": "Well, of course you are. If any of the following sounds up your alley, jump on the next flight to LA. Or actually, maybe just start with an email.",
+    "new": "We hire senior minds who want to help build the most interesting agency of the next decade. If that sounds like you, drop us a line.",
+    "notes": "Removed the 'manifesting your dream job / jump on a flight to LA' tone — doesn't fit a serious agency for CMOs. Confidence without cutesy."
+  },
+  {
+    "id": "R087",
+    "section": "Join / Careers",
+    "location": "Intro link mailto",
+    "source": "JoinSection.tsx:101",
+    "current": "hello@hyvemedia.com",
+    "new": "hello@hyvemedia.com",
+    "notes": ""
+  },
+  {
+    "id": "R088",
+    "section": "Join / Careers",
+    "location": "Value 1 — title",
+    "source": "JoinSection.tsx:60",
+    "current": "Radiate positivity",
+    "new": "Do the sharp thing, not the safe thing",
+    "notes": "Replaces 'Radiate positivity' — values framed as call-to-action, per your Strategic Intent note."
+  },
+  {
+    "id": "R089",
+    "section": "Join / Careers",
+    "location": "Value 1 — description (two paragraphs)",
+    "source": "JoinSection.tsx:61",
+    "current": "At HYVE Media, it's not what we do that makes us memorable — it's how we do it. Core to that philosophy is how we show up in the world: radiating positivity in everything we do.\n\nWhether it's our \"can do\" attitude or the optimistic energy we bring to each interaction, you can feel our warm & welcoming spirit across every touchpoint. It's no wonder clients are naturally drawn to our magnetic presence.",
+    "new": "Safe outputs are why most agencies are interchangeable. We don't hire for safe. We hire for people who can take a messy brief and turn it into a clear, defensible idea others can rally around.",
+    "notes": ""
+  },
+  {
+    "id": "R090",
+    "section": "Join / Careers",
+    "location": "Value 2 — title",
+    "source": "JoinSection.tsx:65",
+    "current": "Crazy empathetic",
+    "new": "Own the outcome, not the task",
+    "notes": "Replaces 'Crazy empathetic' — commercial, action-oriented."
+  },
+  {
+    "id": "R091",
+    "section": "Join / Careers",
+    "location": "Value 2 — description",
+    "source": "JoinSection.tsx:66",
+    "current": "Not to get all woo woo, but people always come first. We listen, are accountable, and put ourselves in our colleagues' and clients' shoes daily. But not in any kind of manufactured way — authenticity, always.",
+    "new": "We don't want box-tickers. We want people who care whether the work moves the business. That means thinking commercially, pushing back when needed, and staying close to the result.",
+    "notes": ""
+  },
+  {
+    "id": "R092",
+    "section": "Join / Careers",
+    "location": "Value 3 — title",
+    "source": "JoinSection.tsx:70",
+    "current": "High quality, always",
+    "new": "Use AI like a senior, not a crutch",
+    "notes": "Replaces 'High quality, always' — names the real HYVE behaviour."
+  },
+  {
+    "id": "R093",
+    "section": "Join / Careers",
+    "location": "Value 3 — description (two paragraphs)",
+    "source": "JoinSection.tsx:71",
+    "current": "Clients love us not only because we're warm, but because we produce at a world-class rate. Among our partners we're known as the gold standard of media. And tbh, that's probably underselling it.\n\nThat level of quality is represented across our brand and the people we hire. We are a dependable, high-caliber team that knows how to win the long game.",
+    "new": "Agentic AI is the lever. Senior judgement is the hand. We want people who use AI to 10x their thinking — not replace it. If that distinction matters to you, you'll fit here.",
+    "notes": ""
+  },
+  {
+    "id": "R094",
+    "section": "Promise Photos",
+    "location": "Image 1 alt",
+    "source": "PromisePhotosSection.tsx:18",
+    "current": "Promise visual one",
+    "new": "HYVE team at work",
+    "notes": ""
+  },
+  {
+    "id": "R095",
+    "section": "Promise Photos",
+    "location": "Image 2 alt",
+    "source": "PromisePhotosSection.tsx:35",
+    "current": "Promise visual two",
+    "new": "HYVE culture visual",
+    "notes": ""
+  },
+  {
+    "id": "R096",
+    "section": "Contact",
+    "location": "Eyebrow",
+    "source": "ContactSection.tsx:21",
+    "current": "Contact Us",
+    "new": "Contact",
+    "notes": ""
+  },
+  {
+    "id": "R097",
+    "section": "Contact",
+    "location": "Headline",
+    "source": "ContactSection.tsx:24",
+    "current": "Let's build your communications edge.",
+    "new": "Let's talk about how you grow next.",
+    "notes": "Replaces 'Let's build your communications edge' — aligned to growth positioning."
+  },
+  {
+    "id": "R098",
+    "section": "Contact",
+    "location": "Body paragraph",
+    "source": "ContactSection.tsx:27",
+    "current": "Share your goals and we'll reach out with a tailored plan. This is a demo form.",
+    "new": "Tell us what you're trying to move. We'll come back with a sharp view on how agentic AI plus senior thinking can get you there.",
+    "notes": "Removed 'This is a demo form' language — go-live ready."
+  },
+  {
+    "id": "R099",
+    "section": "Contact",
+    "location": "Form label — Full Name",
+    "source": "ContactSection.tsx:48",
+    "current": "Full Name",
+    "new": "Full name",
+    "notes": ""
+  },
+  {
+    "id": "R100",
+    "section": "Contact",
+    "location": "Form placeholder — Full Name",
+    "source": "ContactSection.tsx:52",
+    "current": "Jane Doe",
+    "new": "Jane Doe",
+    "notes": ""
+  },
+  {
+    "id": "R101",
+    "section": "Contact",
+    "location": "Form label — Email",
+    "source": "ContactSection.tsx:64",
+    "current": "Email",
+    "new": "Work email",
+    "notes": ""
+  },
+  {
+    "id": "R102",
+    "section": "Contact",
+    "location": "Form placeholder — Email",
+    "source": "ContactSection.tsx:68",
+    "current": "name@company.com",
+    "new": "name@company.com",
+    "notes": ""
+  },
+  {
+    "id": "R103",
+    "section": "Contact",
+    "location": "Form label — Company",
+    "source": "ContactSection.tsx:80",
+    "current": "Company",
+    "new": "Company",
+    "notes": ""
+  },
+  {
+    "id": "R104",
+    "section": "Contact",
+    "location": "Form placeholder — Company",
+    "source": "ContactSection.tsx:84",
+    "current": "HYVE Labs",
+    "new": "Company name",
+    "notes": ""
+  },
+  {
+    "id": "R105",
+    "section": "Contact",
+    "location": "Form label — Service Focus",
+    "source": "ContactSection.tsx:96",
+    "current": "Service Focus",
+    "new": "What you need help with",
+    "notes": ""
+  },
+  {
+    "id": "R106",
+    "section": "Contact",
+    "location": "Form select placeholder",
+    "source": "ContactSection.tsx:108",
+    "current": "Select a service",
+    "new": "Choose a focus",
+    "notes": ""
+  },
+  {
+    "id": "R107",
+    "section": "Contact",
+    "location": "Form select — option 1",
+    "source": "ContactSection.tsx:110",
+    "current": "Strategy",
+    "new": "Growth Strategy",
+    "notes": ""
+  },
+  {
+    "id": "R108",
+    "section": "Contact",
+    "location": "Form select — option 2",
+    "source": "ContactSection.tsx:111",
+    "current": "Thought Leadership",
+    "new": "Agentic AI Systems",
+    "notes": ""
+  },
+  {
+    "id": "R109",
+    "section": "Contact",
+    "location": "Form select — option 3",
+    "source": "ContactSection.tsx:112",
+    "current": "Press Relations",
+    "new": "Unified Commerce",
+    "notes": ""
+  },
+  {
+    "id": "R110",
+    "section": "Contact",
+    "location": "Form select — option 4",
+    "source": "ContactSection.tsx:113",
+    "current": "Content",
+    "new": "Future of Search",
+    "notes": ""
+  },
+  {
+    "id": "R111",
+    "section": "Contact",
+    "location": "Form label — Message",
+    "source": "ContactSection.tsx:119",
+    "current": "Message",
+    "new": "What you're trying to solve",
+    "notes": ""
+  },
+  {
+    "id": "R112",
+    "section": "Contact",
+    "location": "Form placeholder — Message",
+    "source": "ContactSection.tsx:123",
+    "current": "Tell us about your goals...",
+    "new": "Describe the problem, the goal, and what 'success' looks like.",
+    "notes": ""
+  },
+  {
+    "id": "R113",
+    "section": "Contact",
+    "location": "Submit button",
+    "source": "ContactSection.tsx:143",
+    "current": "Send Message",
+    "new": "Send",
+    "notes": ""
+  },
+  {
+    "id": "R114",
+    "section": "Footer",
+    "location": "Logo alt",
+    "source": "Footer.tsx:11",
+    "current": "HYVE Media",
+    "new": "HYVE",
+    "notes": ""
+  },
+  {
+    "id": "R115",
+    "section": "Footer",
+    "location": "Tagline",
+    "source": "Footer.tsx:19",
+    "current": "Made in Dubai",
+    "new": "Built in Dubai. For ambitious brands.",
+    "notes": "Replaces 'Made in Dubai' — adds positioning."
+  },
+  {
+    "id": "R116",
+    "section": "Footer",
+    "location": "Address label",
+    "source": "Footer.tsx:25",
+    "current": "Address",
+    "new": "Address",
+    "notes": ""
+  },
+  {
+    "id": "R117",
+    "section": "Footer",
+    "location": "Address (two lines)",
+    "source": "Footer.tsx:27",
+    "current": "Office 2904, Marina Plaza,\nDubai Marina, Dubai, UAE",
+    "new": "Office 2904, Marina Plaza,\nDubai Marina, Dubai, UAE",
+    "notes": ""
+  },
+  {
+    "id": "R118",
+    "section": "Footer",
+    "location": "Navigate label",
+    "source": "Footer.tsx:34",
+    "current": "Navigate",
+    "new": "Navigate",
+    "notes": ""
+  },
+  {
+    "id": "R119",
+    "section": "Footer",
+    "location": "Nav link 1",
+    "source": "Footer.tsx:36",
+    "current": "Why",
+    "new": "Why",
+    "notes": ""
+  },
+  {
+    "id": "R120",
+    "section": "Footer",
+    "location": "Nav link 2",
+    "source": "Footer.tsx:36",
+    "current": "What",
+    "new": "What",
+    "notes": ""
+  },
+  {
+    "id": "R121",
+    "section": "Footer",
+    "location": "Nav link 3",
+    "source": "Footer.tsx:36",
+    "current": "How",
+    "new": "How",
+    "notes": ""
+  },
+  {
+    "id": "R122",
+    "section": "Footer",
+    "location": "Nav link 4",
+    "source": "Footer.tsx:36",
+    "current": "Promise",
+    "new": "Promise",
+    "notes": ""
+  },
+  {
+    "id": "R123",
+    "section": "Footer",
+    "location": "Nav link 5",
+    "source": "Footer.tsx:36",
+    "current": "Join",
+    "new": "Join",
+    "notes": ""
+  },
+  {
+    "id": "R124",
+    "section": "Footer",
+    "location": "Connect label",
+    "source": "Footer.tsx:50",
+    "current": "Connect",
+    "new": "Connect",
+    "notes": ""
+  },
+  {
+    "id": "R125",
+    "section": "Footer",
+    "location": "Instagram URL",
+    "source": "Footer.tsx:52",
+    "current": "https://instagram.com/hyvemedia",
+    "new": "https://instagram.com/hyvemedia",
+    "notes": "Verify handle still correct."
+  },
+  {
+    "id": "R126",
+    "section": "Footer",
+    "location": "Instagram link text",
+    "source": "Footer.tsx:53",
+    "current": "Instagram",
+    "new": "Instagram",
+    "notes": ""
+  },
+  {
+    "id": "R127",
+    "section": "Footer",
+    "location": "LinkedIn URL",
+    "source": "Footer.tsx:55",
+    "current": "https://linkedin.com/company/hyvemedia",
+    "new": "https://linkedin.com/company/hyvemedia",
+    "notes": "Verify handle still correct."
+  },
+  {
+    "id": "R128",
+    "section": "Footer",
+    "location": "LinkedIn link text",
+    "source": "Footer.tsx:56",
+    "current": "LinkedIn",
+    "new": "LinkedIn",
+    "notes": ""
+  },
+  {
+    "id": "R129",
+    "section": "Footer",
+    "location": "Contact email",
+    "source": "Footer.tsx:58",
+    "current": "hello@hyvemedia.com",
+    "new": "hello@hyvemedia.com",
+    "notes": ""
+  },
+  {
+    "id": "R130",
+    "section": "Footer",
+    "location": "Copyright line",
+    "source": "Footer.tsx:70",
+    "current": "© 2026 HYVE Media. All rights reserved.",
+    "new": "© 2026 HYVE. All rights reserved.",
+    "notes": ""
+  },
+  {
+    "id": "R131",
+    "section": "WhatsApp Float",
+    "location": "Prefilled message",
+    "source": "WhatsAppFloat.tsx:4",
+    "current": "Hi HYVE Media, I would like to learn more about your communications services.",
+    "new": "Hi HYVE, I'd like to talk about how agentic AI could accelerate our growth.",
+    "notes": ""
+  },
+  {
+    "id": "R132",
+    "section": "WhatsApp Float",
+    "location": "WhatsApp number (in URL)",
+    "source": "WhatsAppFloat.tsx:7",
+    "current": "971500000000",
+    "new": "971500000000",
+    "notes": "DECISION NEEDED: Replace with real WhatsApp number before go-live."
+  },
+  {
+    "id": "R133",
+    "section": "WhatsApp Float",
+    "location": "aria-label",
+    "source": "WhatsAppFloat.tsx:14",
+    "current": "Chat on WhatsApp",
+    "new": "Chat on WhatsApp",
+    "notes": ""
+  },
+  {
+    "id": "R134",
+    "section": "404 Page",
+    "location": "Headline",
+    "source": "NotFound.tsx:15",
+    "current": "404",
+    "new": "404",
+    "notes": ""
+  },
+  {
+    "id": "R135",
+    "section": "404 Page",
+    "location": "Body",
+    "source": "NotFound.tsx:16",
+    "current": "Oops! Page not found",
+    "new": "This page isn't here. Let's get you back on track.",
+    "notes": ""
+  },
+  {
+    "id": "R136",
+    "section": "404 Page",
+    "location": "Return link text",
+    "source": "NotFound.tsx:18",
+    "current": "Return to Home",
+    "new": "Back to HYVE",
+    "notes": ""
+  }
+]

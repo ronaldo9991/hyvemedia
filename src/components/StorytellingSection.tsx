@@ -33,11 +33,11 @@ const StorytellingSection = () => (
               width: "230px",
               height: "230px",
               background:
-                "radial-gradient(circle, rgba(255,123,0,0.34) 0%, rgba(255,123,0,0.18) 36%, rgba(255,123,0,0.05) 64%, rgba(255,123,0,0) 100%)",
+                "radial-gradient(circle, rgb(var(--color-orange-rgb) / 0.34) 0%, rgb(var(--color-orange-rgb) / 0.18) 36%, rgb(var(--color-orange-rgb) / 0.05) 64%, rgb(var(--color-orange-rgb) / 0) 100%)",
               filter: "blur(16px)",
             }}
           />
-          <GlowBlob size={148} intensity="medium" animated className="relative z-10 drop-shadow-[0_0_42px_rgba(255,122,0,0.45)]" />
+          <GlowBlob size={148} intensity="medium" animated className="relative z-10 drop-shadow-[0_0_42px_rgb(var(--color-orange-rgb)_/_0.45)]" />
         </motion.div>
       </motion.div>
       <motion.h2
@@ -48,7 +48,7 @@ const StorytellingSection = () => (
         className="type-h2 mx-auto"
         style={{ color: "#262626", maxWidth: "680px" }}
       >
-        Storytelling is a long game. We're here to help you win it.
+        Search isn't search. Content isn't content. Commerce isn't commerce. They're one system now — and most agencies haven't caught up.
       </motion.h2>
     </div>
   </section>

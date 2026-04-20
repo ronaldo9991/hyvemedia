@@ -52,9 +52,9 @@ const Navbar = () => {
 
       <a href="#" className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
         {scrolled ? (
-          <img src={logoSvg} alt="HYVE Logo" className="h-8 w-auto" />
+          <img src={logoSvg} alt="HYVE logo" className="h-8 w-auto" />
         ) : (
-          <img src={iconSvg} alt="HYVE Icon" className="h-10 w-auto" />
+          <img src={iconSvg} alt="HYVE icon" className="h-10 w-auto" />
         )}
       </a>
 
@@ -70,7 +70,7 @@ const Navbar = () => {
           </a>
         ))}
         <a
-          href="mailto:hello@hyvemedia.com"
+          href="mailto:hello@hyvemedia.io"
           className="type-nav hidden md:block relative group"
           style={{ color: "#262626" }}
         >
@@ -101,7 +101,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="mailto:hello@hyvemedia.com"
+            href="mailto:hello@hyvemedia.io"
             className="type-nav"
             style={{ color: "#262626", fontSize: "15px" }}
           >

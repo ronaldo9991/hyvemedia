@@ -70,26 +70,26 @@ export default function GlowBlob({
             cx="0.5" cy="0.44" r="0.48"
             gradientTransform="translate(0.5 0.44) scale(1 0.84) translate(-0.5 -0.44)"
           >
-            <stop offset="0%" stopColor="#FFF3E0" />
-            <stop offset="25%" stopColor="#F5DFC0" />
-            <stop offset="48%" stopColor="#F0C87A" />
-            <stop offset="65%" stopColor="#F0A040" />
-            <stop offset="80%" stopColor="#FF8A18" stopOpacity="0.6" />
-            <stop offset="100%" stopColor="#FF7B00" stopOpacity="0" />
+            <stop offset="0%" style={{ stopColor: "var(--glow-cream-0)" }} />
+            <stop offset="25%" style={{ stopColor: "var(--glow-cream-1)" }} />
+            <stop offset="48%" style={{ stopColor: "var(--glow-cream-2)" }} />
+            <stop offset="65%" style={{ stopColor: "var(--glow-cream-3)" }} />
+            <stop offset="80%" style={{ stopColor: "var(--glow-cream-4)" }} stopOpacity="0.6" />
+            <stop offset="100%" style={{ stopColor: "var(--glow-cream-5)" }} stopOpacity="0" />
           </radialGradient>
 
           {/* Top warm glow */}
           <radialGradient id={`topGlow-${id}`} cx="50%" cy="8%" r="30%">
-            <stop offset="0%" stopColor="#FFD060" stopOpacity="0.55" />
-            <stop offset="50%" stopColor="#FFB830" stopOpacity="0.18" />
-            <stop offset="100%" stopColor="#FF7B00" stopOpacity="0" />
+            <stop offset="0%" style={{ stopColor: "var(--glow-top-0)" }} stopOpacity="0.55" />
+            <stop offset="50%" style={{ stopColor: "var(--glow-top-1)" }} stopOpacity="0.18" />
+            <stop offset="100%" style={{ stopColor: "var(--color-orange)" }} stopOpacity="0" />
           </radialGradient>
 
           {/* Bottom warmth — deeper orange at base */}
           <radialGradient id={`bottomWarm-${id}`} cx="50%" cy="80%" r="34%">
-            <stop offset="0%" stopColor="#E85800" stopOpacity="0.4" />
-            <stop offset="60%" stopColor="#FF6A00" stopOpacity="0.12" />
-            <stop offset="100%" stopColor="#FF7B00" stopOpacity="0" />
+            <stop offset="0%" style={{ stopColor: "var(--glow-bottom-0)" }} stopOpacity="0.4" />
+            <stop offset="60%" style={{ stopColor: "var(--glow-bottom-1)" }} stopOpacity="0.12" />
+            <stop offset="100%" style={{ stopColor: "var(--color-orange)" }} stopOpacity="0" />
           </radialGradient>
 
           {/* Outer glow halo — wide soft bloom */}
@@ -111,7 +111,7 @@ export default function GlowBlob({
         {/* Layer 1: Wide outer glow bloom */}
         <motion.path
           d={PATH_STATES[0]}
-          fill="#FF7B00"
+          style={{ fill: "var(--color-orange)" }}
           opacity={cfg.glowOpacity}
           filter={`url(#halo-${id})`}
           animate={animated ? { d: [...PATH_STATES, PATH_STATES[0]] } : undefined}
@@ -121,7 +121,7 @@ export default function GlowBlob({
         {/* Layer 2: Tighter mid-glow for intensity */}
         <motion.path
           d={PATH_STATES[0]}
-          fill="#FF8C00"
+          style={{ fill: "var(--glow-layer-2)" }}
           opacity={cfg.glowOpacity * 0.6}
           filter={`url(#haloMid-${id})`}
           animate={animated ? { d: [...PATH_STATES, PATH_STATES[0]] } : undefined}
@@ -131,7 +131,7 @@ export default function GlowBlob({
         {/* Layer 3: Solid orange base */}
         <motion.path
           d={PATH_STATES[0]}
-          fill="#FF7B00"
+          style={{ fill: "var(--color-orange)" }}
           filter={`url(#soft-${id})`}
           animate={animated ? { d: [...PATH_STATES, PATH_STATES[0]] } : undefined}
           transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}

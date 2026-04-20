@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="space-y-6">
         <img
           src={logoSvg}
-          alt="HYVE Media"
+          alt="HYVE"
           loading="lazy"
           className="h-9 w-auto"
           style={{ filter: "invert(1) brightness(1.08)" }}
@@ -16,7 +16,7 @@ const Footer = () => (
         <div className="flex items-center gap-3">
           <GlowBlob size={24} intensity="low" animated />
           <p className="type-body" style={{ color: "rgba(245,243,235,0.75)", margin: 0 }}>
-            Made in Dubai
+            Built in Dubai. For ambitious brands.
           </p>
         </div>
       </div>
@@ -49,14 +49,14 @@ const Footer = () => (
       <div className="space-y-4">
         <p className="type-caption" style={{ color: "rgba(245,243,235,0.45)", margin: 0 }}>Connect</p>
         <div className="flex flex-col gap-3">
-          <a href="https://instagram.com/hyvemedia" target="_blank" rel="noreferrer" className="type-body transition-opacity hover:opacity-80" style={{ color: "#ff7b00" }}>
+          <a href="https://instagram.com/hyvemedia" target="_blank" rel="noreferrer" className="type-body transition-opacity hover:opacity-80" style={{ color: "var(--color-orange)" }}>
             Instagram
           </a>
-          <a href="https://linkedin.com/company/hyvemedia" target="_blank" rel="noreferrer" className="type-body transition-opacity hover:opacity-80" style={{ color: "#ff7b00" }}>
+          <a href="https://linkedin.com/company/hyvemedia" target="_blank" rel="noreferrer" className="type-body transition-opacity hover:opacity-80" style={{ color: "var(--color-orange)" }}>
             LinkedIn
           </a>
-          <a href="mailto:hello@hyvemedia.com" className="type-body transition-opacity hover:opacity-80" style={{ color: "#ff7b00" }}>
-            hello@hyvemedia.com
+          <a href="mailto:hello@hyvemedia.io" className="type-body transition-opacity hover:opacity-80" style={{ color: "var(--color-orange)" }}>
+            hello@hyvemedia.io
           </a>
         </div>
       </div>
@@ -67,7 +67,7 @@ const Footer = () => (
       style={{ borderTop: "1px solid rgba(245,243,235,0.1)" }}
     >
       <p className="type-caption" style={{ color: "rgba(245,243,235,0.35)", fontWeight: 400 }}>
-        © 2026 HYVE Media. All rights reserved.
+        © 2026 HYVE. All rights reserved.
       </p>
     </div>
   </footer>

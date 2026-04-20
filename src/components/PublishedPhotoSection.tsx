@@ -13,7 +13,7 @@ const PublishedPhotoSection = () => (
       >
         <img
           src={publishedImage}
-          alt="Media publication feature visual"
+          alt="Coverage feature visual"
           loading="lazy"
           decoding="async"
           width={1600}

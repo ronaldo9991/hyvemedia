@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const GRADIENT =
-  "radial-gradient(circle at 42% 38%, #fff5dc 0%, #ffe4a6 18%, #f9b336 40%, #f08a2e 58%, #e86528 74%, #d74b22 100%)";
+  "radial-gradient(circle at 42% 38%, var(--diamond-0) 0%, var(--diamond-1) 18%, var(--diamond-2) 40%, var(--diamond-3) 58%, var(--diamond-4) 74%, var(--diamond-5) 100%)";
 
 const Starburst = () => (
   <div className="pyramid-loader" aria-hidden="true">
@@ -43,7 +43,7 @@ const Diamond = () => (
       }}
       style={{
         background: GRADIENT,
-        filter: "drop-shadow(0 2px 6px rgba(215, 75, 34, 0.3))",
+        filter: "drop-shadow(0 2px 6px rgb(var(--diamond-shadow-rgb) / 0.3))",
       }}
     >
       <span
@@ -57,18 +57,18 @@ const Diamond = () => (
 const values = [
   {
     Shape: Starburst,
-    title: "Radiate positivity",
-    desc: "At HYVE Media, it's not what we do that makes us memorable — it's how we do it. Core to that philosophy is how we show up in the world: radiating positivity in everything we do.\n\nWhether it's our \"can do\" attitude or the optimistic energy we bring to each interaction, you can feel our warm & welcoming spirit across every touchpoint. It's no wonder clients are naturally drawn to our magnetic presence.",
+    title: "Do the sharp thing, not the safe thing",
+    desc: "Safe outputs are why most agencies are interchangeable. We don't hire for safe. We hire for people who can take a messy brief and turn it into a clear, defensible idea others can rally around.",
   },
   {
     Shape: Blob,
-    title: "Crazy empathetic",
-    desc: "Not to get all woo woo, but people always come first. We listen, are accountable, and put ourselves in our colleagues' and clients' shoes daily. But not in any kind of manufactured way — authenticity, always.",
+    title: "Own the outcome, not the task",
+    desc: "We don't want box-tickers. We want people who care whether the work moves the business. That means thinking commercially, pushing back when needed, and staying close to the result.",
   },
   {
     Shape: Diamond,
-    title: "High quality, always",
-    desc: "Clients love us not only because we're warm, but because we produce at a world-class rate. Among our partners we're known as the gold standard of media. And tbh, that's probably underselling it.\n\nThat level of quality is represented across our brand and the people we hire. We are a dependable, high-caliber team that knows how to win the long game.",
+    title: "Use AI like a senior, not a crutch",
+    desc: "AI is the lever. Senior judgement is the hand. We want people who use it to 10x their thinking — not replace it. If that distinction matters to you, you'll fit here.",
   },
 ];
 
@@ -81,28 +81,27 @@ const JoinSection = () => (
     <div className="max-w-[1320px] mx-auto container-x">
       <p
         className="type-caption mb-8"
-        style={{ color: "#ff7b00" }}
+        style={{ color: "var(--color-orange)" }}
       >
-        Join Our Team
+        Join Us
       </p>
       <h2
         className="type-h2 mb-6"
         style={{ color: "#262626", maxWidth: "680px" }}
       >
-        Manifesting your dream job at HYVE Media?
+        Think you belong at HYVE?
       </h2>
       <p
         className="type-body-lg mb-24"
         style={{ color: "#262626", opacity: 0.6, maxWidth: "560px" }}
       >
-        Well, of course you are. If any of the following sounds up your alley, jump on the next
-        flight to LA. Or actually, maybe just start with an{" "}
+        We hire senior minds who want to help build the most interesting agency of the next decade. If that sounds like you,{" "}
         <a
-          href="mailto:hello@hyvemedia.com"
+          href="mailto:hello@hyvemedia.io"
           className="underline underline-offset-4 transition-colors"
           style={{ color: "#262626", opacity: 1 }}
         >
-          email
+          drop us a line
         </a>
         .
       </p>

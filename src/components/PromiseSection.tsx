@@ -4,23 +4,23 @@ import LoadingSpinner from "@/components/LoadingSpinner";
 const promises = [
   {
     num: "01",
-    title: "Extremely communicative",
-    desc: "You'll hear from us A LOT. We won't leave you waiting or wondering what's next. Communication is the name of the game for us.",
+    title: "On time. Above expectation.",
+    desc: "We deliver what we promised, when we promised it — usually sharper than you asked for. That's the whole point.",
   },
   {
     num: "02",
-    title: "High quality results",
-    desc: "The proof is in the pudding — we deliver results that create the greatest impact.",
+    title: "Senior thinking, every brief",
+    desc: "No junior drift. No AI-generated fluff. The senior minds on your account are the senior minds solving the problem.",
   },
   {
     num: "03",
-    title: "Crypto obsessed",
-    desc: "Communicating the value of cutting-edge companies and projects to the world gives us purpose; it's a mission that's personal to us.",
+    title: "Machine speed, human judgement",
+    desc: "We use AI where it amplifies senior thinking. We don't use it where it replaces it. That's how you get smarter work, faster — without the shallow output everyone else is shipping.",
   },
   {
     num: "04",
-    title: "Win the long game",
-    desc: "Your goals are our goals. We're here to help you go the distance and realize your project's vision.",
+    title: "In it for the long game",
+    desc: "We work best with brands that want to compound outcomes, not run a campaign and disappear. Your growth is our brief — for as long as you want us on it.",
   },
 ];
 
@@ -33,17 +33,17 @@ const PromiseSection = () => (
     <div className="max-w-[1320px] mx-auto container-x">
       <p
         className="type-caption text-center mb-8"
-        style={{ color: "#ff7b00" }}
+        style={{ color: "var(--color-orange)" }}
       >
-        Our Promise To You
+        Our Promise
       </p>
       <h2
         className="type-h2 text-center mx-auto mb-20"
         style={{ color: "#262626", maxWidth: "680px" }}
       >
-        You can lean on us as your communications experts.
+        Hire us for outcomes.
         <br />
-        "We've got you!"
+        We deliver them.
       </h2>
       <LoadingSpinner />
 
@@ -67,7 +67,7 @@ const PromiseSection = () => (
           >
             <p
               className="type-h2 mb-2"
-              style={{ color: "#ff7b00" }}
+              style={{ color: "var(--color-orange)" }}
             >
               {p.num}.
             </p>

@@ -15,7 +15,7 @@ const PromisePhotosSection = () => (
         >
           <img
             src={promise1}
-            alt="Promise visual one"
+            alt="HYVE team at work"
             loading="lazy"
             decoding="async"
             width={1400}
@@ -33,7 +33,7 @@ const PromisePhotosSection = () => (
         >
           <img
             src={promise2}
-            alt="Promise visual two"
+            alt="HYVE culture visual"
             loading="lazy"
             decoding="async"
             width={1400}

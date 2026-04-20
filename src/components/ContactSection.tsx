@@ -6,7 +6,7 @@ const ContactSection = () => (
     className="section-pad relative overflow-hidden"
     style={{
       background:
-        "radial-gradient(1200px 500px at 50% -10%, rgba(255,123,0,0.16), transparent 60%), #f5f3eb",
+        "radial-gradient(1200px 500px at 50% -10%, rgb(var(--color-orange-rgb) / 0.16), transparent 60%), #f5f3eb",
     }}
   >
     <div className="max-w-[1320px] mx-auto container-x">
@@ -17,14 +17,14 @@ const ContactSection = () => (
         transition={{ duration: 0.6 }}
         className="mb-10"
       >
-        <p className="type-caption mb-5" style={{ color: "#ff9a1f" }}>
-          Contact Us
+        <p className="type-caption mb-5" style={{ color: "var(--color-orange-light)" }}>
+          Contact
         </p>
         <h2 className="type-h2" style={{ color: "#262626", maxWidth: "760px" }}>
-          Let&apos;s build your communications edge.
+          Let&apos;s talk about how you grow next.
         </h2>
         <p className="type-body mt-4" style={{ color: "rgba(38,38,38,0.72)", maxWidth: "620px" }}>
-          Share your goals and we&apos;ll reach out with a tailored plan. This is a demo form.
+          Tell us what you&apos;re trying to move. We&apos;ll come back with a sharp view on how we&apos;d approach it.
         </p>
       </motion.div>
 
@@ -35,17 +35,17 @@ const ContactSection = () => (
         transition={{ delay: 0.1, duration: 0.6 }}
         className="grid grid-cols-1 md:grid-cols-2 gap-5 rounded-2xl p-6 md:p-8"
         style={{
-          border: "1px solid rgba(255, 123, 0, 0.35)",
+          border: "1px solid rgb(var(--color-orange-rgb) / 0.35)",
           background:
-            "linear-gradient(180deg, rgba(255,123,0,0.08) 0%, rgba(255,123,0,0.02) 100%), rgba(255,255,255,0.86)",
-          boxShadow: "0 0 0 1px rgba(255,123,0,0.1) inset, 0 18px 50px rgba(0,0,0,0.08)",
+            "linear-gradient(180deg, rgb(var(--color-orange-rgb) / 0.08) 0%, rgb(var(--color-orange-rgb) / 0.02) 100%), rgba(255,255,255,0.86)",
+          boxShadow: "0 0 0 1px rgb(var(--color-orange-rgb) / 0.1) inset, 0 18px 50px rgba(0,0,0,0.08)",
           backdropFilter: "blur(6px)",
         }}
         onSubmit={(e) => e.preventDefault()}
       >
         <label className="flex flex-col gap-2">
           <span className="type-caption" style={{ color: "rgba(38,38,38,0.72)" }}>
-            Full Name
+            Full name
           </span>
           <input
             type="text"
@@ -53,7 +53,7 @@ const ContactSection = () => (
             className="type-body rounded-xl px-4 py-3 outline-none"
             style={{
               background: "rgba(255,255,255,0.9)",
-              border: "1px solid rgba(255,154,31,0.25)",
+              border: "1px solid rgb(var(--color-orange-light-rgb) / 0.25)",
               color: "#262626",
             }}
           />
@@ -61,7 +61,7 @@ const ContactSection = () => (
 
         <label className="flex flex-col gap-2">
           <span className="type-caption" style={{ color: "rgba(38,38,38,0.72)" }}>
-            Email
+            Work email
           </span>
           <input
             type="email"
@@ -69,7 +69,7 @@ const ContactSection = () => (
             className="type-body rounded-xl px-4 py-3 outline-none"
             style={{
               background: "rgba(255,255,255,0.9)",
-              border: "1px solid rgba(255,154,31,0.25)",
+              border: "1px solid rgb(var(--color-orange-light-rgb) / 0.25)",
               color: "#262626",
             }}
           />
@@ -81,11 +81,11 @@ const ContactSection = () => (
           </span>
           <input
             type="text"
-            placeholder="HYVE Labs"
+            placeholder="Company name"
             className="type-body rounded-xl px-4 py-3 outline-none"
             style={{
               background: "rgba(255,255,255,0.9)",
-              border: "1px solid rgba(255,154,31,0.25)",
+              border: "1px solid rgb(var(--color-orange-light-rgb) / 0.25)",
               color: "#262626",
             }}
           />
@@ -93,38 +93,38 @@ const ContactSection = () => (
 
         <label className="flex flex-col gap-2">
           <span className="type-caption" style={{ color: "rgba(38,38,38,0.72)" }}>
-            Service Focus
+            What you need help with
           </span>
           <select
             className="type-body rounded-xl px-4 py-3 outline-none"
             style={{
               background: "rgba(255,255,255,0.9)",
-              border: "1px solid rgba(255,154,31,0.25)",
+              border: "1px solid rgb(var(--color-orange-light-rgb) / 0.25)",
               color: "#262626",
             }}
             defaultValue=""
           >
             <option value="" disabled>
-              Select a service
+              Choose a focus
             </option>
-            <option>Strategy</option>
-            <option>Thought Leadership</option>
-            <option>Press Relations</option>
-            <option>Content</option>
+            <option>Growth Strategy</option>
+            <option>Agentic AI Systems</option>
+            <option>Unified Commerce</option>
+            <option>Future of Search</option>
           </select>
         </label>
 
         <label className="md:col-span-2 flex flex-col gap-2">
           <span className="type-caption" style={{ color: "rgba(38,38,38,0.72)" }}>
-            Message
+            What you&apos;re trying to solve
           </span>
           <textarea
             rows={5}
-            placeholder="Tell us about your goals..."
+            placeholder="Describe the problem, the goal, and what 'success' looks like."
             className="type-body rounded-xl px-4 py-3 outline-none resize-y min-h-[140px]"
             style={{
               background: "rgba(255,255,255,0.9)",
-              border: "1px solid rgba(255,154,31,0.25)",
+              border: "1px solid rgb(var(--color-orange-light-rgb) / 0.25)",
               color: "#262626",
             }}
           />
@@ -136,11 +136,11 @@ const ContactSection = () => (
             className="type-nav rounded-full px-7 py-3 transition-transform hover:scale-[1.02]"
             style={{
               color: "#ffffff",
-              background: "linear-gradient(135deg, #ff9a1f 0%, #ff7b00 55%, #ff5e00 100%)",
-              boxShadow: "0 10px 30px rgba(255,123,0,0.35)",
+              background: "linear-gradient(135deg, var(--color-orange-light) 0%, var(--color-orange) 55%, var(--color-orange-dark) 100%)",
+              boxShadow: "0 10px 30px rgb(var(--color-orange-rgb) / 0.35)",
             }}
           >
-            Send Message
+            Send
           </button>
         </div>
       </motion.form>

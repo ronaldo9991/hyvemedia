@@ -1,6 +1,5 @@
 const logos = [
-  "Bloomberg", "CoinDesk", "CNBC", "Forbes", "The Block", "Fortune",
-  "Bitcoin Magazine", "Decrypt", "MarketWatch", "BeInCrypto"
+  "Bloomberg", "CNBC", "Forbes", "Fortune", "MarketWatch"
 ];
 
 const LogoMarquee = () => (
@@ -17,7 +16,7 @@ const LogoMarquee = () => (
       className="type-caption text-center mb-8"
       style={{ color: "#262626", opacity: 0.5 }}
     >
-      Regularly published in
+      Featured in
     </p>
     <div className="relative">
       <div className="flex animate-marquee whitespace-nowrap">

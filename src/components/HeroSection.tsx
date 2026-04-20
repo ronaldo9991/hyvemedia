@@ -20,7 +20,7 @@ const HeroSection = () => {
       ref={sectionRef}
       className="h-[115vh] relative overflow-hidden"
       style={{
-        background: "linear-gradient(180deg, #ff7b00 0%, #fbb36f 40%, #f5f3eb 100%)",
+        background: "linear-gradient(180deg, var(--color-orange) 0%, var(--color-orange-mid) 40%, #f5f3eb 100%)",
       }}
     >
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -35,7 +35,7 @@ const HeroSection = () => {
               color: "#262626",
             }}
           >
-            An Onchain Communications Firm
+            A Modern Media Agency.
           </span>
         </motion.p>
 

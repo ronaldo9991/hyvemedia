@@ -2,18 +2,21 @@ import { useEffect, useRef } from "react";
 import GlowBlob from "@/components/GlowBlob";
 
 const services = [
-  { title: "Strategy", desc: "Refine your narrative to support your business goals." },
   {
-    title: "Thought Leadership",
-    desc: "Build the profiles of your team's leaders to broaden the impact of your story in the media.",
+    title: "Growth Strategy",
+    desc: "Clear commercial direction — built to move the business, not just the marketing metrics.",
   },
   {
-    title: "Press Relations",
-    desc: "Work our relationship magic to garner the coverage your project deserves.",
+    title: "Agentic AI Systems",
+    desc: "Intelligent agents that take real work off your team — from research to content to campaign execution. Deployed with senior oversight on every output.",
   },
   {
-    title: "Content",
-    desc: "Craft compelling content that meets your target audience where they're at.",
+    title: "Unified Commerce",
+    desc: "One connected system across brand, performance and CRM. Less friction. More revenue.",
+  },
+  {
+    title: "Future of Search",
+    desc: "Own the answer — across Google, ChatGPT, Perplexity and Gemini. We position you where buyers now actually look.",
   },
 ];
 
@@ -67,9 +70,9 @@ const WhatWeDoSection = () => {
         <p className="eyebrow type-caption">What We Do</p>
 
         <h2 className="heading type-h2">
-          You bring the technology.
+          Growth, re-engineered.
           <br />
-          We spotlight your message on center stage.
+          Senior minds. Machine speed. Real outcomes.
         </h2>
 
         <div className="rows-stage">

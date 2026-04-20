@@ -15,7 +15,7 @@ const WhySection = () => (
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="type-caption mb-8"
-            style={{ color: "#ff7b00" }}
+            style={{ color: "var(--color-orange)" }}
           >
             Why We Exist
           </motion.p>
@@ -28,7 +28,7 @@ const WhySection = () => (
             className="type-h2 mb-10"
             style={{ color: "#262626", maxWidth: "680px" }}
           >
-            We believe in the long-term impact of decentralized technology and the power of communications.
+            Senior strategists, amplified by agentic AI. Not replaced by it.
           </motion.h2>
 
           <motion.p
@@ -39,7 +39,7 @@ const WhySection = () => (
             className="type-body-lg"
             style={{ color: "#262626", maxWidth: "620px" }}
           >
-            Since 2016, we have focused exclusively on this innovative industry, helping teams on the cutting edge tell their stories. Whether it's infrastructure, the convergence of blockchain &amp; AI, or venture capital — we do what we do because without great storytelling, no one would know this technology exists.
+            Media has shifted. Search, content and commerce are becoming one system — most agencies aren't built for it. HYVE is. Senior minds lead every brief. We move at machine speed without losing the judgement. The result: sharper thinking, faster, with outcomes that show up on the P&amp;L.
           </motion.p>
         </div>
 
@@ -52,7 +52,7 @@ const WhySection = () => (
         >
           <img
             src={whyImage}
-            alt="Why we exist visual"
+            alt="Why HYVE exists visual"
             loading="lazy"
             width={1200}
             height={1600}
