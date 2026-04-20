@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 .claude/scheduled_tasks.lock
 .claude/settings.local.json
+
+# Content audit workbooks — source lives elsewhere; do not commit
+*.xlsx
+~$*.xlsx
