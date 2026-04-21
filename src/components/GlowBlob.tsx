@@ -10,20 +10,17 @@ interface GlowBlobProps {
   intensity?: GlowBlobIntensity;
 }
 
-const PATH_STATES = [
-  "M160 20 C237 20 300 83 300 160 C300 237 237 300 160 300 C83 300 20 237 20 160 C20 83 83 20 160 20Z",
-  "M161 18 C239 21 302 84 301 162 C299 239 236 302 159 301 C81 299 18 236 19 159 C21 81 83 17 161 18Z",
-  "M159 19 C238 18 303 82 302 159 C301 238 239 303 161 302 C82 301 17 239 18 161 C19 82 80 20 159 19Z",
-  "M160 17 C240 19 304 81 303 160 C302 240 238 304 160 303 C80 302 16 240 17 160 C18 80 80 15 160 17Z",
-];
+// Exact HYVE icon hex geometry from src/assets/icon.svg.
+const LOGO_HEX_PATH =
+  "M181.64,76L140.29,4.33C138.75,1.65,135.89,0,132.79,0L50.06.03c-3.09,0-5.95,1.65-7.5,4.33L1.16,76.06c-1.55,2.68-1.55,5.98,0,8.66l41.35,71.67c1.55,2.68,4.4,4.33,7.5,4.33l82.74-.03c3.09,0,5.95-1.65,7.5-4.33l41.39-71.7c1.55-2.68,1.55-5.98,0-8.66ZM152.51,82.02l-19.31,33.45-29.52-50.99c-1.04-1.8-2.96-2.91-5.04-2.91l-58.92-.07,19.31-33.45c1.04-1.8,2.95-2.9,5.03-2.9l55.56.07c2.08,0,4,1.11,5.04,2.91l27.84,48.08c1.04,1.8,1.04,4.01,0,5.81Z";
 
 const intensityMap: Record<
   GlowBlobIntensity,
-  { floatPx: number; morphDuration: number; spinDuration: number; rotateDuration: number; glowOpacity: number; scaleDelta: number }
+  { floatPx: number; spinDuration: number; glowOpacity: number; scaleDelta: number }
 > = {
-  low: { floatPx: 2, morphDuration: 20, spinDuration: 30, rotateDuration: 50, glowOpacity: 0.3, scaleDelta: 0.005 },
-  medium: { floatPx: 3, morphDuration: 16, spinDuration: 24, rotateDuration: 40, glowOpacity: 0.38, scaleDelta: 0.008 },
-  high: { floatPx: 5, morphDuration: 12, spinDuration: 18, rotateDuration: 28, glowOpacity: 0.5, scaleDelta: 0.015 },
+  low: { floatPx: 2, spinDuration: 30, glowOpacity: 0.3, scaleDelta: 0.005 },
+  medium: { floatPx: 3, spinDuration: 24, glowOpacity: 0.38, scaleDelta: 0.008 },
+  high: { floatPx: 5, spinDuration: 18, glowOpacity: 0.5, scaleDelta: 0.015 },
 };
 
 export default function GlowBlob({
@@ -60,36 +57,18 @@ export default function GlowBlob({
         className="w-full h-full"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        animate={animated ? { rotate: 360 } : undefined}
-        transition={animated ? { duration: cfg.rotateDuration, ease: "linear", repeat: Infinity } : undefined}
       >
         <defs>
-          {/* Cream interior — elliptical, wider than tall */}
-          <radialGradient
-            id={`cream-${id}`}
-            cx="0.5" cy="0.44" r="0.48"
-            gradientTransform="translate(0.5 0.44) scale(1 0.84) translate(-0.5 -0.44)"
-          >
-            <stop offset="0%" stopColor="#FFF3E0" />
-            <stop offset="25%" stopColor="#F5DFC0" />
-            <stop offset="48%" stopColor="#F0C87A" />
-            <stop offset="65%" stopColor="#F0A040" />
-            <stop offset="80%" stopColor="#FF8A18" stopOpacity="0.6" />
-            <stop offset="100%" stopColor="#FF7B00" stopOpacity="0" />
+          {/* Subtle in-shape contrast, still within brand hue */}
+          <radialGradient id={`hexHighlight-${id}`} cx="44%" cy="34%" r="42%">
+            <stop offset="0%" style={{ stopColor: "var(--color-orange-light)" }} stopOpacity="0.18" />
+            <stop offset="55%" style={{ stopColor: "var(--color-orange-light)" }} stopOpacity="0.06" />
+            <stop offset="100%" style={{ stopColor: "var(--color-orange-light)" }} stopOpacity="0" />
           </radialGradient>
-
-          {/* Top warm glow */}
-          <radialGradient id={`topGlow-${id}`} cx="50%" cy="8%" r="30%">
-            <stop offset="0%" stopColor="#FFD060" stopOpacity="0.55" />
-            <stop offset="50%" stopColor="#FFB830" stopOpacity="0.18" />
-            <stop offset="100%" stopColor="#FF7B00" stopOpacity="0" />
-          </radialGradient>
-
-          {/* Bottom warmth — deeper orange at base */}
-          <radialGradient id={`bottomWarm-${id}`} cx="50%" cy="80%" r="34%">
-            <stop offset="0%" stopColor="#E85800" stopOpacity="0.4" />
-            <stop offset="60%" stopColor="#FF6A00" stopOpacity="0.12" />
-            <stop offset="100%" stopColor="#FF7B00" stopOpacity="0" />
+          <radialGradient id={`hexShade-${id}`} cx="68%" cy="74%" r="45%">
+            <stop offset="0%" style={{ stopColor: "var(--color-orange-dark)" }} stopOpacity="0.08" />
+            <stop offset="60%" style={{ stopColor: "var(--color-orange-dark)" }} stopOpacity="0.03" />
+            <stop offset="100%" style={{ stopColor: "var(--color-orange-dark)" }} stopOpacity="0" />
           </radialGradient>
 
           {/* Outer glow halo — wide soft bloom */}
@@ -108,58 +87,34 @@ export default function GlowBlob({
           </filter>
         </defs>
 
-        {/* Layer 1: Wide outer glow bloom */}
-        <motion.path
-          d={PATH_STATES[0]}
-          fill="#FF7B00"
-          opacity={cfg.glowOpacity}
-          filter={`url(#halo-${id})`}
-          animate={animated ? { d: [...PATH_STATES, PATH_STATES[0]] } : undefined}
-          transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
-        />
+        <g transform="translate(32 47) scale(1.4065934066)">
+          {/* Layer 1: Wide outer glow bloom */}
+          <motion.path
+            d={LOGO_HEX_PATH}
+            style={{ fill: "var(--color-orange)" }}
+            opacity={cfg.glowOpacity}
+            filter={`url(#halo-${id})`}
+          />
 
-        {/* Layer 2: Tighter mid-glow for intensity */}
-        <motion.path
-          d={PATH_STATES[0]}
-          fill="#FF8C00"
-          opacity={cfg.glowOpacity * 0.6}
-          filter={`url(#haloMid-${id})`}
-          animate={animated ? { d: [...PATH_STATES, PATH_STATES[0]] } : undefined}
-          transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
-        />
+          {/* Layer 2: Tighter mid-glow for intensity */}
+          <motion.path
+            d={LOGO_HEX_PATH}
+            style={{ fill: "var(--color-orange)" }}
+            opacity={cfg.glowOpacity * 0.6}
+            filter={`url(#haloMid-${id})`}
+          />
 
-        {/* Layer 3: Solid orange base */}
-        <motion.path
-          d={PATH_STATES[0]}
-          fill="#FF7B00"
-          filter={`url(#soft-${id})`}
-          animate={animated ? { d: [...PATH_STATES, PATH_STATES[0]] } : undefined}
-          transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
-        />
+          {/* Layer 3: Solid single-color hexagon */}
+          <motion.path
+            d={LOGO_HEX_PATH}
+            style={{ fill: "var(--color-orange)" }}
+            filter={`url(#soft-${id})`}
+          />
 
-        {/* Layer 4: Cream interior — egg-yolk center */}
-        <motion.path
-          d={PATH_STATES[0]}
-          fill={`url(#cream-${id})`}
-          animate={animated ? { d: [...PATH_STATES, PATH_STATES[0]] } : undefined}
-          transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
-        />
-
-        {/* Layer 5: Top warm glow */}
-        <motion.path
-          d={PATH_STATES[0]}
-          fill={`url(#topGlow-${id})`}
-          animate={animated ? { d: [...PATH_STATES, PATH_STATES[0]] } : undefined}
-          transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
-        />
-
-        {/* Layer 6: Bottom warmth */}
-        <motion.path
-          d={PATH_STATES[0]}
-          fill={`url(#bottomWarm-${id})`}
-          animate={animated ? { d: [...PATH_STATES, PATH_STATES[0]] } : undefined}
-          transition={animated ? { duration: cfg.morphDuration, ease: "easeInOut", repeat: Infinity } : undefined}
-        />
+          {/* Precision contrast overlays */}
+          <motion.path d={LOGO_HEX_PATH} fill={`url(#hexHighlight-${id})`} />
+          <motion.path d={LOGO_HEX_PATH} fill={`url(#hexShade-${id})`} />
+        </g>
       </motion.svg>
     </motion.div>
   );
