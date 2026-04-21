@@ -33,6 +33,20 @@ const Footer = () => (
       <div className="space-y-4">
         <p className="type-caption" style={{ color: "rgba(245,243,235,0.45)", margin: 0 }}>Navigate</p>
         <div className="flex flex-wrap gap-5">
+          <a
+            href="/yellow"
+            className="type-nav transition-opacity hover:opacity-100"
+            style={{ color: "rgba(245,243,235,0.6)" }}
+          >
+            Yellow
+          </a>
+          <a
+            href="/deep-blue"
+            className="type-nav transition-opacity hover:opacity-100"
+            style={{ color: "rgba(245,243,235,0.6)" }}
+          >
+            Deep Blue
+          </a>
           {["Why", "What", "How", "Promise", "Join"].map((l) => (
             <a
               key={l}

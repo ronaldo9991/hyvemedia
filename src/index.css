@@ -8,10 +8,21 @@
   :root {
     --color-page: #f5f3eb;
     --color-text: #262626;
+<<<<<<< HEAD
+=======
+    --color-orange: #fd735d;
+    --color-orange-light: #ff9585;
+    --color-orange-dark: #ea4a35;
+    --color-orange-mid: #ffb3a5;
+    --color-orange-rgb: 253 115 93;
+    --color-orange-light-rgb: 255 149 133;
+    --color-orange-dark-rgb: 234 74 53;
+>>>>>>> e34383d (Add yellow and deep-blue themed routes with precise hex branding.)
     --color-teal-mist: #dee7e8;
     --color-divider: #c9c9c9;
     --color-near-black: #1d1d1d;
 
+<<<<<<< HEAD
     /* Brand palette — default (coral) theme. Overridden by .theme-yellow below. */
     --color-orange: #fd735d;
     --color-orange-light: #ff9585;
@@ -21,6 +32,8 @@
     --color-orange-light-rgb: 255 149 133;
     --color-orange-dark-rgb: 234 74 53;
 
+=======
+>>>>>>> e34383d (Add yellow and deep-blue themed routes with precise hex branding.)
     /* Join section Diamond radial (6 stops) */
     --diamond-0: #fff0ea;
     --diamond-1: #ffd8ce;
@@ -92,8 +105,11 @@
     --font-body: 'Inter', sans-serif;
   }
 
+<<<<<<< HEAD
   /* Alternate palette — warm golden yellow. Scope by wrapping content in
      <div className="theme-yellow">. Used by src/pages/Yellow.tsx. */
+=======
+>>>>>>> e34383d (Add yellow and deep-blue themed routes with precise hex branding.)
   .theme-yellow {
     --color-orange: #f7c579;
     --color-orange-light: #fbd9a8;
@@ -132,6 +148,48 @@
     --loader-mid: #f0b555;
     --loader-accent-rgb: 232 164 62;
   }
+<<<<<<< HEAD
+=======
+
+  .theme-deep-blue {
+    --color-orange: #17396a;
+    --color-orange-light: #24508a;
+    --color-orange-dark: #0f2a4f;
+    --color-orange-mid: #3a6aa4;
+    --color-orange-rgb: 23 57 106;
+    --color-orange-light-rgb: 36 80 138;
+    --color-orange-dark-rgb: 15 42 79;
+
+    --primary: 214 64% 25%;
+    --accent: 214 64% 25%;
+    --ring: 214 64% 25%;
+
+    --diamond-0: #e8eef8;
+    --diamond-1: #c8d8ee;
+    --diamond-2: #7f9fc8;
+    --diamond-3: #4f79ad;
+    --diamond-4: #2d588e;
+    --diamond-5: #0f2a4f;
+    --diamond-shadow-rgb: 15 42 79;
+
+    --glow-cream-0: #eef4ff;
+    --glow-cream-1: #d4e1f4;
+    --glow-cream-2: #9db8de;
+    --glow-cream-3: #5d86ba;
+    --glow-cream-4: #3568a5;
+    --glow-cream-5: #17396a;
+    --glow-top-0: #b9cee9;
+    --glow-top-1: #89aad1;
+    --glow-bottom-0: #0f2a4f;
+    --glow-bottom-1: #17396a;
+    --glow-layer-2: #3f6fa9;
+
+    --loader-primary: #17396a;
+    --loader-deep: #0f2a4f;
+    --loader-mid: #3f6fa9;
+    --loader-accent-rgb: 23 57 106;
+  }
+>>>>>>> e34383d (Add yellow and deep-blue themed routes with precise hex branding.)
 }
 
 @layer base {
