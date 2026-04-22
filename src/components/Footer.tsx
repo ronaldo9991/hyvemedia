@@ -47,6 +47,13 @@ const Footer = () => (
           >
             Deep Blue
           </a>
+          <a
+            href="/hermes-agent"
+            className="type-nav transition-opacity hover:opacity-100"
+            style={{ color: "rgba(245,243,235,0.6)" }}
+          >
+            Hermes Agent
+          </a>
           {["Why", "What", "How", "Promise", "Join"].map((l) => (
             <a
               key={l}
