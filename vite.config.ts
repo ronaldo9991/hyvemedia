@@ -15,7 +15,10 @@ export default defineConfig(({ mode }) => ({
   preview: {
     host: "::",
     port: Number(process.env.PORT) || 4173,
-    allowedHosts: ["hyvemedia-production.up.railway.app"],
+    allowedHosts: [
+      "hyvemedia-production.up.railway.app",
+      "mirror-melrose-magic-production.up.railway.app",
+    ],
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
