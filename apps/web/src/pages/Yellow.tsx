@@ -7,25 +7,25 @@ import PublishedPhotoSection from "@/components/PublishedPhotoSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import HowWeWorkSection from "@/components/HowWeWorkSection";
 import PromiseSection from "@/components/PromiseSection";
-import PromisePhotosSection from "@/components/PromisePhotosSection";
 import JoinSection from "@/components/JoinSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import dustImage from "@/assets/dust.png";
+import dustOrangeImage from "@/assets/dustorange.png";
 
 const Yellow = () => (
   <div className="theme-yellow" style={{ overflowX: "clip" }}>
     <Navbar />
     <HeroSection />
     <StorytellingSection />
-    <WhySection />
+    <WhySection imageSrc={dustImage} />
     <LogoMarquee />
-    <PublishedPhotoSection />
+    <PublishedPhotoSection imageSrc={dustOrangeImage} />
     <WhatWeDoSection />
     <HowWeWorkSection />
     <PromiseSection />
     <JoinSection />
-    <PromisePhotosSection />
     <ContactSection />
     <Footer />
     <WhatsAppFloat />
