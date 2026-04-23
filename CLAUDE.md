@@ -4,31 +4,67 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-- `bun install` — install deps. This repo standardizes on **bun**; `bun.lock` is the only lockfile (no `package-lock.json`, no `bun.lockb`).
-- `bun dev` — Vite dev server on `http://localhost:8080` (HMR overlay disabled).
-- `bun run build` — production build. `bun run build:dev` — unminified dev-mode build that keeps the `lovable-tagger` component tagger active.
-- `bun run preview` / `bun start` — serve the built `dist/` (preview binds `::` on `PORT` or `4173`; `hyvemedia-production.up.railway.app` is allowlisted).
-- `bun run lint` — ESLint (flat config, TS + React hooks). Note: `@typescript-eslint/no-unused-vars` is disabled and `react-refresh/only-export-components` is a warning.
-- `bun test` — Vitest (jsdom, globals on, `src/test/setup.ts` runs first, glob `src/**/*.{test,spec}.{ts,tsx}`). `bun run test:watch` for watch mode. Run one file with `bunx vitest run src/path/to/x.test.tsx`.
-- Playwright config comes from `lovable-agent-playwright-config` via `playwright.config.ts`; tests use the shared fixture re-exported from `playwright-fixture.ts`.
+All commands run from the repo root. The repo is a **pnpm workspaces** monorepo (requires Node >= 20, pnpm >= 9; `packageManager` is pinned in root `package.json`).
+
+- `pnpm install` — install deps across the workspace.
+- `pnpm dev` — Vite 8 dev server for `apps/web` on `http://localhost:8080` (HMR overlay disabled).
+- `pnpm build` — production build of `apps/web` into `apps/web/dist/`.
+- `pnpm preview` / `pnpm start` — serve the built bundle. `start` binds `0.0.0.0` on `$PORT || 4173`; `hyvemedia-production.up.railway.app` and `mirror-melrose-magic-production.up.railway.app` are allowlisted for Railway.
+- `pnpm lint` — ESLint on `apps/web` (flat config, TS + React hooks). `@typescript-eslint/no-unused-vars` is off; `react-refresh/only-export-components` is a warning.
+- `pnpm -C apps/web exec tsc --noEmit -p tsconfig.app.json` — full-strict typecheck of `apps/web`.
+- `pnpm -C packages/ui exec tsc --noEmit` — typecheck the UI package.
+
+To scope a task to one workspace project, use `pnpm --filter <name> <cmd>` (names: `web`, `@hyve/ui`, `@hyve/tokens`).
+
+## Workspace layout
+
+```
+apps/
+  web/                         # the marketing site (Vite + React 19 + TS)
+    src/
+      components/              # page sections (Hero, Why, WhatWeDo, etc.), PascalCase
+      pages/                   # Index, Yellow, DeepBlue, HermesAgent, NotFound
+      hooks/                   # use-mobile
+      App.tsx                  # BrowserRouter + 5 routes
+      main.tsx
+      index.css                # imports @hyve/tokens + @theme inline block + page-only utilities
+    public/                    # favicon.ico, icon.svg, og-image.png, robots.txt
+    index.html
+packages/
+  ui/                          # 36 shadcn/ui primitives + cn() utility
+    src/
+      components/ui/*.tsx      # one file per primitive (accordion, dialog, button, form, …)
+      lib/utils.ts             # cn()
+    components.json            # shadcn config: "new-york" style, "neutral" base — run `pnpm --filter @hyve/ui dlx shadcn add X` from here
+  tokens/                      # design tokens: CSS variables + theme classes + typography
+    src/
+      index.css                # :root vars, .theme-yellow, .theme-deep-blue, accordion keyframes, .type-* utilities
+scripts/                       # Python content tooling (unrelated to the build)
+tsconfig.base.json             # shared strict TS base
+pnpm-workspace.yaml            # workspaces: apps/*, packages/*
+.npmrc                         # shamefully-hoist=true, auto-install-peers=true
+```
 
 ## Architecture
 
-Single-page marketing site (Vite + React 18 + TypeScript, SWC, Tailwind, shadcn/ui). There is essentially one page.
-
-- `src/App.tsx` wires `QueryClientProvider` → `TooltipProvider` → both toasters (`ui/toaster` and `ui/sonner`) → `BrowserRouter`. Routes: `/` → `pages/Index` (default coral theme), `/yellow` → `pages/Yellow` (golden-yellow palette preview), catch-all `*` → `pages/NotFound`. Add new routes *above* the catch-all.
-- `src/pages/Index.tsx` is the whole marketing page — it composes the section components from `src/components/` in a fixed vertical order (Navbar → Hero → Storytelling → Why → LogoMarquee → PublishedPhoto → WhatWeDo → HowWeWork → Promise → Join → PromisePhotos → Contact → Footer, plus a floating `WhatsAppFloat`). Section order lives here; reordering the page means editing this file. `pages/Yellow.tsx` is the same tree wrapped in `<div className="theme-yellow">`.
-- `src/components/*.tsx` (PascalCase, non-`ui/`) are the page sections — each is a self-contained, presentational block. `src/components/ui/` is shadcn/ui primitives (Radix-based); treat those as library code and don't hand-edit them unless regenerating.
-- Path alias `@/*` → `src/*` is configured in `tsconfig.json`, `vite.config.ts`, and `vitest.config.ts` — keep all three in sync if you change it. `vite.config.ts` dedupes React to avoid duplicate copies when linked.
+- **`apps/web/src/App.tsx`** wires `BrowserRouter` + `Routes`. Five routes: `/` → `pages/Index` (default coral theme), `/yellow` → `pages/Yellow` (golden-yellow palette), `/deep-blue` → `pages/DeepBlue` (deep blue palette), `/hermes-agent` → `pages/HermesAgent` (internal portal), catch-all `*` → `pages/NotFound`. Add new routes **above** the catch-all.
+- **`pages/Index.tsx`** is the whole marketing page — it composes the section components from `components/` in a fixed vertical order (Navbar → Hero → Storytelling → Why → LogoMarquee → PublishedPhoto → WhatWeDo → HowWeWork → Promise → Join → PromisePhotos → Contact → Footer, plus a floating `WhatsAppFloat`). Section order lives here; reordering the page means editing this file. `pages/Yellow.tsx` and `pages/DeepBlue.tsx` wrap the same tree in `<div className="theme-yellow">` / `<div className="theme-deep-blue">` to retint via CSS var overrides.
+- **`apps/web/src/components/*.tsx`** are the page sections — self-contained, presentational. They reference brand colors via `var(--color-orange)` etc., not Tailwind utility classes.
+- **`packages/ui/src/components/ui/`** holds shadcn/ui primitives (Radix-based). None are currently imported by sections — they're staged for future use. Do not hand-edit; regenerate via `pnpm --filter @hyve/ui dlx shadcn add <name>`.
+- Path alias `@/*` → `apps/web/src/*` is configured in `apps/web/tsconfig.app.json` and `apps/web/vite.config.ts`. Keep both in sync.
+- Workspace imports: the app imports from `@hyve/tokens/index.css` (one entry) and `@hyve/ui/components/ui/<name>` / `@hyve/ui/lib/utils` (per-component exports).
 
 ## Styling system
 
-- Tailwind with CSS-variable-driven tokens. Semantic shadcn tokens (`background`, `primary`, `border`, …) resolve to HSL vars declared in `src/index.css`; brand palette is also exposed as flat Tailwind colors: `page` `#f5f3eb`, `text` `#262626`, `orange` (= `var(--color-orange)`, default `#fd735d`), `orange-mid` (= `var(--color-orange-mid)`, default `#ffb3a5`), `teal-mist` `#dee7e8`, `divider` `#c9c9c9`, `near-black` `#1d1d1d`. Prefer these over raw hex.
-- **Theme system**: every orange used in the site is a CSS custom property declared in `:root` in `src/index.css` — base (`--color-orange`, `--color-orange-light`, `--color-orange-dark`, `--color-orange-mid`), RGB triplets for alpha (`--color-orange-rgb`, `--color-orange-light-rgb`, `--color-orange-dark-rgb`), the 6-stop Diamond radial (`--diamond-0..5`, `--diamond-shadow-rgb`), GlowBlob SVG layers (`--glow-*`), and loader tints (`--loader-*`). Components reference these via `var(...)`; no orange hex literals remain in section components or `GlowBlob.tsx`. A `.theme-yellow` class in the same file overrides all of them with warm-golden values — wrap any subtree in `<div className="theme-yellow">` to retint. When adding a new orange-ish colour, define it as a CSS variable (in both `:root` and `.theme-yellow`) rather than hard-coding hex, or the theme-switching breaks.
-- Container is centered with `2xl` max of `1320px` and zero default padding (`tailwind.config.ts`).
-- Fonts: Inter (display/body) and Cormorant Garamond + Outfit are loaded from Google Fonts at the top of `src/index.css`.
-- TS config is intentionally lenient (`strictNullChecks: false`, `noImplicitAny: false`, unused-var checks off). Don't re-enable these casually — existing code relies on the looseness.
-
-## Lovable integration
-
-Project is Lovable-generated. `lovable-tagger` runs only in `development` mode (see `vite.config.ts`) to annotate components for the Lovable editor; production builds exclude it. Playwright config + fixture come from the `lovable-agent-playwright-config` package rather than being defined locally.
+- **Tailwind 4** via `@tailwindcss/vite` plugin — there is no `tailwind.config.ts`. Configuration lives in CSS: `apps/web/src/index.css` has an `@theme inline { ... }` block exposing the shadcn semantic tokens (`--color-background`, `--color-primary`, `--color-border`, …) as Tailwind utility classes. The `inline` modifier means utilities emit `color: hsl(var(--foreground))` literally, so the `.theme-yellow` / `.theme-deep-blue` CSS variable overrides still cascade at runtime.
+- **Design tokens** live in `packages/tokens/src/index.css`:
+  - Brand palette CSS vars: `--color-page`, `--color-text`, `--color-orange` + `--color-orange-light/dark/mid`, `--color-orange-rgb` (triplet for alpha), `--color-teal-mist`, `--color-divider`, `--color-near-black`.
+  - Effect vars: `--diamond-0..5` (Join section radial), `--glow-*` (GlowBlob SVG), `--loader-*` (loader palette).
+  - shadcn semantic tokens (HSL triplets): `--background`, `--foreground`, `--primary`, `--border`, etc.
+  - Fonts: `--font-display`, `--font-body` (both Inter). Google Fonts loaded via `<link>` in `apps/web/index.html` (Inter, Cormorant Garamond, Outfit).
+  - Theme classes: `.theme-yellow` and `.theme-deep-blue` override every orange-ish var. Wrap any subtree in `<div className="theme-yellow">` to retint.
+  - Typography utilities: `.type-h1`, `.type-h2`, `.type-h3`, `.type-body-lg`, `.type-body`, `.type-nav`, `.type-caption`.
+- When adding a new theme-aware color, define it as a CSS variable in **both** `:root` and every `.theme-*` block in `packages/tokens/src/index.css`. Hard-coded hex literals in section components will not respect theme switching.
+- Page-specific CSS (`.section-pad`, `.container-x`, `.animate-marquee`, loader styles, `.whatwedo`) lives in `apps/web/src/index.css`.
+- Tailwind content scanning: `apps/web/src/index.css` uses `@source "../../../packages/ui/src/**/*.{ts,tsx}"` so primitives' utility classes are not purged from the app bundle.
+- **TypeScript is strict** (`strict: true`, `strictNullChecks: true`, `noImplicitAny: true`) in `tsconfig.base.json`. `noUnusedLocals` / `noUnusedParameters` are off.
