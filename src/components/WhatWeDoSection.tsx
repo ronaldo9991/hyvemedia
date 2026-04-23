@@ -4,11 +4,11 @@ import GlowBlob from "@/components/GlowBlob";
 const services = [
   {
     title: "Growth Strategy",
-    desc: "Clear commercial direction — built to move the business, not just the marketing metrics.",
+    desc: "Clear commercial direction, built to move the business, not just the marketing metrics.",
   },
   {
     title: "Agentic AI Systems",
-    desc: "Intelligent agents that take real work off your team — from research to content to campaign execution. Deployed with senior oversight on every output.",
+    desc: "Intelligent agents that take real work off your team, from research to content to campaign execution. Deployed with senior oversight on every output.",
   },
   {
     title: "Unified Commerce",
@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "Future of Search",
-    desc: "Own the answer — across Google, ChatGPT, Perplexity and Gemini. We position you where buyers now actually look.",
+    desc: "Own the answer across Google, ChatGPT, Perplexity and Gemini. We position you where buyers now actually look.",
   },
 ];
 

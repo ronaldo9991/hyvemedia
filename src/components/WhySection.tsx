@@ -39,7 +39,7 @@ const WhySection = () => (
             className="type-body-lg"
             style={{ color: "#262626", maxWidth: "620px" }}
           >
-            Media has shifted. Search, content and commerce are becoming one system — most agencies aren't built for it. HYVE is. Senior minds lead every brief. We move at machine speed without losing the judgement. The result: sharper thinking, faster, with outcomes that show up on the P&amp;L.
+            Media has shifted. Search, content and commerce are becoming one system. Most agencies aren't built for it. HYVE is. Senior minds lead every brief. We move at machine speed without losing the judgement. The result: sharper thinking, faster, with outcomes that show up on the P&amp;L.
           </motion.p>
         </div>
 

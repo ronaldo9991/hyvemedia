@@ -5,7 +5,7 @@ const promises = [
   {
     num: "01",
     title: "On time. Above expectation.",
-    desc: "We deliver what we promised, when we promised it — usually sharper than you asked for. That's the whole point.",
+    desc: "We deliver what we promised, when we promised it, usually sharper than you asked for. That's the whole point.",
   },
   {
     num: "02",
@@ -15,12 +15,12 @@ const promises = [
   {
     num: "03",
     title: "Machine speed, human judgement",
-    desc: "We use AI where it amplifies senior thinking. We don't use it where it replaces it. That's how you get smarter work, faster — without the shallow output everyone else is shipping.",
+    desc: "We use AI where it amplifies senior thinking. We don't use it where it replaces it. That's how you get smarter work, faster, without the shallow output everyone else is shipping.",
   },
   {
     num: "04",
     title: "In it for the long game",
-    desc: "We work best with brands that want to compound outcomes, not run a campaign and disappear. Your growth is our brief — for as long as you want us on it.",
+    desc: "We work best with brands that want to compound outcomes, not run a campaign and disappear. Your growth is our brief, for as long as you want us on it.",
   },
 ];
 

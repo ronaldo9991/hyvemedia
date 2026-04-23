@@ -68,7 +68,7 @@ const values = [
   {
     Shape: Diamond,
     title: "Use AI like a senior, not a crutch",
-    desc: "AI is the lever. Senior judgement is the hand. We want people who use it to 10x their thinking — not replace it. If that distinction matters to you, you'll fit here.",
+    desc: "AI is the lever. Senior judgement is the hand. We want people who use it to 10x their thinking, not replace it. If that distinction matters to you, you'll fit here.",
   },
 ];
 

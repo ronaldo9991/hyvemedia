@@ -26,7 +26,7 @@ const steps: Step[] = [
   {
     phase: "01 · Diagnose",
     title: "Diagnose the real problem",
-    blurb: "We start where most agencies skip — the commercial problem, not the marketing brief.",
+    blurb: "We start where most agencies skip: the commercial problem, not the marketing brief.",
     meta: "Commercial · Audience · Signals",
     Icon: Compass,
   },
@@ -47,7 +47,7 @@ const steps: Step[] = [
   {
     phase: "04 · Launch",
     title: "Launch, then prove it",
-    blurb: "Go live fast. Measure against commercial outcomes — not vanity metrics.",
+    blurb: "Go live fast. Measure against commercial outcomes, not vanity metrics.",
     meta: "Launch · Measurement · Proof",
     Icon: Rocket,
   },

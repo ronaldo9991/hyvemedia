@@ -48,7 +48,7 @@ const StorytellingSection = () => (
         className="type-h2 mx-auto"
         style={{ color: "#262626", maxWidth: "680px" }}
       >
-        Search isn't search. Content isn't content. Commerce isn't commerce. They're one system now — and most agencies haven't caught up.
+        Search isn't search. Content isn't content. Commerce isn't commerce. They're one system now, and most agencies haven't caught up.
       </motion.h2>
     </div>
   </section>
