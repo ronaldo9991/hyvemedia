@@ -126,7 +126,7 @@
 
 .loadingspinner div {
   display: inline-block;
-  background: darkorange;
+  background: var(--loader-primary);
   border: none;
   border-radius: 2px;
   width: var(--square);
