@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import whyImage from "@/assets/why.png";
 
-const WhySection = () => (
+interface WhySectionProps {
+  imageSrc?: string;
+}
+
+const WhySection = ({ imageSrc = whyImage }: WhySectionProps) => (
   <section
     id="why"
     className="section-pad"
@@ -51,7 +55,7 @@ const WhySection = () => (
           className="overflow-hidden rounded-[8px] lg:justify-self-end lg:w-full lg:max-w-[460px]"
         >
           <img
-            src={whyImage}
+            src={imageSrc}
             alt="Why HYVE exists visual"
             loading="lazy"
             width={1200}

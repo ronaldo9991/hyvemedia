@@ -11,32 +11,33 @@ import JoinSection from "@/components/JoinSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import deepBlue2 from "@/assets/deepblue-2.png";
+import deep1 from "@/assets/deep1.png";
+import deep3 from "@/assets/deep3.png";
 
 const DeepBlue = () => (
   <div className="theme-deep-blue" style={{ overflowX: "clip" }}>
     <Navbar />
     <HeroSection />
     <StorytellingSection />
-    <WhySection />
+    <WhySection imageSrc={deep1} />
     <LogoMarquee />
     <section style={{ backgroundColor: "#f5f3eb" }}>
-      <div className="max-w-[1320px] mx-auto container-x pb-16 md:pb-20">
+      <div className="max-w-[1320px] mx-auto container-x pt-10 md:pt-12 pb-16 md:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="overflow-hidden rounded-[8px]"
+          className="max-w-[1120px] mx-auto overflow-hidden rounded-[8px] aspect-[16/9]"
         >
           <img
-            src={deepBlue2}
-            alt="Deep blue feature visual two"
+            src={deep3}
+            alt="Deep blue feature visual"
             loading="lazy"
             decoding="async"
             width={1600}
             height={900}
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover object-[center_82%]"
           />
         </motion.div>
       </div>
